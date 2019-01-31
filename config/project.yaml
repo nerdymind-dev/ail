@@ -1,0 +1,32 @@
+email:
+  fromEmail: andrew@circa42.com
+  fromName: 'An Impossible Life'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  6b2436d8-2d4f-4d42-86f7-234715c4d4a8:
+    name: Common
+siteGroups:
+  b33a47af-8b04-4634-b8f8-f29c74af73f7:
+    name: 'An Impossible Life'
+sites:
+  294d42da-43a8-438d-8070-ed01a0d18aa1:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'An Impossible Life'
+    primary: true
+    siteGroup: b33a47af-8b04-4634-b8f8-f29c74af73f7
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'An Impossible Life'
+  schemaVersion: 3.1.23
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
