@@ -32,17 +32,27 @@ return [
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+        'siteUrl' => 'http://ail.test',
+        'baseUrl' => 'http://ail.test',
+        'devMode' => true,
     ],
 
     // Staging environment settings
     'staging' => [
         // Prevent administrative changes from being made on staging
         'allowAdminChanges' => false,
+        'devMode' => true,
+        'siteUrl' => 'http://000.000.000.000',
+
+
     ],
 
     // Production environment settings
     'production' => [
         // Prevent administrative changes from being made on production
         'allowAdminChanges' => false,
+        'devMode' => false,
+        'siteUrl' => 'https://animpossiblelife.com',
+
     ],
 ];
