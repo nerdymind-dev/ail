@@ -1,29 +1,45 @@
+{% set entries = craft.entries.section('home').all() %}
+
+{% for entry in entries %}
+  
 <section class="font-serif w-full bg-contain bg-white text-center flex items-center justify-center font-serif p-12 bg-no-repeat" style="background:url({{ siteUrl }}assets/img/frances-gunn-57423-unsplash.jpg);"> 
   <div class="container m-auto flex flex-wrap max-w-xl">
     <div class="flex flex-wrap w-full md:w-1/2 items-start py-4"> 
 		  {# <label for="tagline" class="uppercase text-black w-full tracking-loose">
             An Impossible Life
             </label> #}
-      <h2 class="my-4 text-4xl text-white italic">“Intriguing and heartfelt, readers won’t be able to put it down..."</h2>
+      <h2 class="my-4 text-4xl text-white italic">“{{ entry.headline }}"</h2>
       <p class="leading-normal xs:text-base md:text-2xl text-white text-left tracking-loose mb-4">
-        When thirty-five-year-old Sonja Wasden is involuntarily admitted to a psychiatric hospital by her husband and father, she is sure it is a mistake. A mother of three, living in a beautiful suburb, Sonja’s life appears ideal.
+        {{ entry.synopsis |nl2br }}
       </p>
-      <p class="leading-normal xs:text-base md:text-2xl text-white text-left tracking-loose mb-4">
-        How did she get here? 
-      </p>      
-      <p class="leading-normal xs:text-base md:text-2xl text-white text-left tracking-loose mb-4">
-        In a gripping and breathtaking narrative that makes the reader feel as though they are listening in on a private conversation, Sonja tells the compelling true account of her struggle with depression, mania, an eating disorder, suicide, marriage, and motherhood and the grit needed to live an impossible life.
-      </p>
-        <button class="bg-red-darker shadow hover:bg-white text-white font-semibold hover:text-red-darker py-2 text-xl rounded px-8 border-white border hover:border-red-darker">
-        	Buy on Amazon
-        </button>
+
+      {% set ctaMatrix = craft.matrixBlocks().fieldId(5) %}
+      {% set ctaBlock = ctaMatrix.all() %}
+        {% for block in ctaBlock %} 
+          <a href="{{ block.buttonUrl }}" target="_blank">
+            <button class="bg-red-darker shadow hover:bg-white text-white font-semibold hover:text-red-darker py-2 text-xl rounded px-8 border-white border hover:border-red-darker">
+            	{{ block.buttonCopy }}
+            </button>
+          </a>
+        {% endfor %}
     </div>
-    <div class="md:w-1/2 xs:px-10 sm:px-32 md:px-8 md:pl-16">
-      <img src="{{ siteUrl }}assets/img/ImpossibleLife_cover.jpg" alt="image" class=" shadow-md">
-    </div>
+
+    {% set blocks = entry.coverMatrix %}
+    {% set matrixBlocks = blocks.one() %}
+        {% for block in blocks %}          
+          {% for asset in block.coverImage.all() %}
+            {% if asset %}
+              <div class="md:w-1/2 xs:px-10 sm:px-32 md:px-8 md:pl-16">
+                <img src="{{ asset.getUrl }}" alt="image" class=" shadow-md">
+              </div>
+            {% endif %}
+          {% endfor %}
   </div>
+
+    {% endfor %} 
+
 </section>
 
-
+{% endfor %}{# ending for for entry in entries loop  started in _hero.twig #}
 
 
