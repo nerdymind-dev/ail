@@ -6,49 +6,23 @@
   <div class="flex flex-wrap justify-between items-start">
     
 
-      <div class="w-full sm:w-1/2 lg:w-1/4 flex flex-col p-4">
-      <i class="fas fa-quote-left text-grey-light"></i>
-      <p class="leading-normal mb-4 text-grey-darkest">
-        "This page-turning journey of illness, healing, and faith invites the reader into Sonja’s most private moments. The courageous and talented writing immediately pulls the reader into this vivid tale of love, dedication, and survival.”</p>
-        <p class="my-4 text-sm italic text-right text-grey-dark">
-          — Elizabeth W. Buko, English Teacher<br>
-          Columbia, Missouri 
-        </p>
-      </div>
+  {% set entries = craft.entries.section('praise').all() %}
+  {% for entry in entries %}
     
 
       <div class="w-full sm:w-1/2 lg:w-1/4 flex flex-col p-4">
       <i class="fas fa-quote-left text-grey-light"></i>
-      <p class="leading-normal mb-4 text-grey-darkest">
-        “A gripping and heartwarming story of pure grit, determination, and love. This story is a testament to one woman’s strength of will and devotion to her family. By the end, the reader almost feels like a member of the Wasden family, having been through so much with them.”</p>
+      <p class="leading-normal text-left mb-4 text-grey-darkest">
+        &ldquo;
+          {{ entry.endorsementBody }}
+        &rdquo;</p>
         <p class="my-4 text-sm italic text-right text-grey-dark">
-          — Andrea Stahr, Mother, Wife, Cancer Survivor <br>
-          Portland, Oregon 
+          — {{ entry.endorsementName }}, {{ entry.endorsementTitle }}<br>
+          {{ entry.endorsementLocation }}
         </p>
       </div>
-    
+  {% endfor %}
 
-      <div class="w-full sm:w-1/2 lg:w-1/4 flex flex-col p-4">
-      <i class="fas fa-quote-left text-grey-light"></i>
-      <p class="leading-normal mb-4 text-grey-darkest">
-        “An Impossible Life, is an honest look into the life of a family affected by mental illness. It is immediately engaging and will soften your heart to this largely misunderstood illness. Whether you are trying to better understand mental illness or struggling to discover the key for your own healing, this book is a gift that will help you find peace.”</p>
-        <p class="my-4 text-sm italic text-right text-grey-dark">
-          — Cory Siddoway, Mother, Wife, Science Teacher<br>
-          Spokane, Washington 
-        </p>
-      </div>
-    
-
-      <div class="w-full sm:w-1/2 lg:w-1/4 flex flex-col p-4">
-      <i class="fas fa-quote-left text-grey-light"></i>
-      <p class="leading-normal mb-4 text-grey-darkest">
-        “Being immersed behind the real-life scenes of Sonja’s mental health issues really took me for a ride! I couldn’t put the book down! It was a page turner and an easy read. You come away feeling her pain and her victories. She shares her innermost self which brought me laughter, tears, joy, and love! Sonja is one of a kind, and so is this book!”</p>
-        <p class="my-4 text-sm italic text-right text-grey-dark">
-          — Brook Candland, Mother, Wife<br>
-          Mesa, Arizona 
-        </p>
-      </div>
-    
 
 
   </div>

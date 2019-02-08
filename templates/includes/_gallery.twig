@@ -1,4 +1,4 @@
-<section class="bg-white font-serif lg:py-24" id="photos">
+<section class="bg-white font-serif max-w-xl m-auto lg:py-24" id="photos">
   <div class="text-center container m-auto"> 
     <label for="tagline" class="uppercase tracking-wide font-bold text-center text-grey-dark"> Photos
     </label>
@@ -9,153 +9,26 @@
   </div>
 
 
-  <div class="flex flex-wrap items-center justify-center">
+  <div class="flex flex-wrap items-center m-auto justify-center">
+  {% set entries = craft.entries.section('extras').limit(35).all() %}
 
-    
+        {% for entry in entries %}
+          {% if entry.type == 'photos' %}
+            {% set assets = entry.photo.all() %}
+            {% for asset in assets %}
+                <div class="w-24 m-2">
+                  <div class="overflow-hidden">
+                    <a data-fancybox="gallery" href="{{ asset.getUrl('galleryFull') }}">
+                      <img class="w-full rounded-lg shadow" src="{{ asset.getUrl('galleryThumb') }}" alt="{{ entry.altTag }}" title="{{ entry.titleTag }}">
+                    </a>
+                  </div>
+                </div>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}     
+     
 
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="https://stitches-cdn.hyperyolo.com/demo-bg.png">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="https://stitches-cdn.hyperyolo.com/demo-bg.png">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
+{# 
 
     <div class="w-32 flex-auto">
       <div class="overflow-hidden bg-white">
@@ -164,16 +37,7 @@
         </a>
       </div>
     </div>
-        
-
-    <div class="w-32 flex-auto">
-      <div class="overflow-hidden bg-white">
-        <a data-fancybox="gallery" href="https://stitches-cdn.hyperyolo.com/demo-bg.png">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
-        </a>
-      </div>
-    </div>
-        
+         #}
 
 
   </div>

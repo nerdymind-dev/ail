@@ -13,15 +13,16 @@
         {{ entry.synopsis |nl2br }}
       </p>
 
-      {% set ctaMatrix = craft.matrixBlocks().fieldId(5) %}
-      {% set ctaBlock = ctaMatrix.all() %}
-        {% for block in ctaBlock %} 
-          <a href="{{ block.buttonUrl }}" target="_blank">
-            <button class="bg-red-darker shadow hover:bg-white text-white font-semibold hover:text-red-darker py-2 text-xl rounded px-8 border-white border hover:border-red-darker">
-            	{{ block.buttonCopy }}
-            </button>
-          </a>
-        {% endfor %}
+
+      {% for block in entry.ctaButton %}
+          {% if block.type == "buttonBlock" %}
+            <a href="{{ block.buttonUrl }}" target="_blank">
+              <button class="bg-red-darker shadow hover:bg-white text-white font-semibold hover:text-red-darker py-2 text-xl rounded px-8 border-white border hover:border-red-darker">
+                {{ block.buttonCopy }}
+              </button>
+            </a>
+          {% endif %}
+      {% endfor %}
     </div>
 
     {% set blocks = entry.coverMatrix %}

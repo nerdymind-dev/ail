@@ -1,3 +1,6 @@
+{% set entries = craft.entries.section('authors').all() %}
+
+
 <section class="py-4 font-serif m-auto max-w-xl lg:py-32" id="authors">
     <div class="text-center container m-auto"> 
     <label for="tagline" class="uppercase tracking-wide font-bold text-center text-grey-dark"> About the 
@@ -11,24 +14,21 @@
 
   <div class="m-auto flex flex-wrap flex-col md:flex-row justify-start">
     
-    <div class="md:w-1/2 p-3">
-      <div class="flex flex-col lg:flex-row h-auto lg:h-32">
-        <img class="w-full lg:w-48 flex-none pt-4" src="{{ siteUrl }}assets/img/sonja-wasden.jpg">
-        <div class="bg-white p-4 flex flex-col justify-between leading-normal">              
-          <div class="text-black text-xl mb-2 leading-loose">Sonja Wasden graduated
-from Brigham Young University with a BA in Humanities. She married in 1992 and worked as a homemaker, caring for her three children.</div>
+    {% for entry in entries %}
+    {% set assets = entry.photo.all() %}
+      <div class="flex flex-wrap md:w-1/2">
+        <div class="w-1/3 lg:h-32">
+          {% for asset in assets %}
+            <img class="w-full lg:w-48 pt-6" src="{{ asset.getUrl() }}" alt="{{ entry.altTag }}">
+          {% endfor %}
+        </div>
+        <div class="w-2/3 justify-between leading-normal p-4">           
+          <div class="text-black text-xl leading-loose pr-8 mb-2">
+            {{ entry.authorBio }}
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="md:w-1/2 p-3">
-      <div class="flex flex-col lg:flex-row h-auto lg:h-32">
-        <img class="w-full lg:w-48 flex-none pt-4" src="{{ siteUrl }}assets/img/rachael-siddoway.jpg">
-        <div class="bg-white p-4 flex flex-col justify-between leading-normal">              
-          <div class="text-black text-xl mb-2 leading-loose">Rachael Siddoway
-graduated from Brigham Young University with a degree in Art Education. She started writing novels at the age of twelve and hasn’t stopped drafting new book ideas since.</div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}     
+
   </div>
 </section>

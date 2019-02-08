@@ -1,4 +1,4 @@
-dateModified: 1549415509
+dateModified: 1549585022
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -19,6 +19,23 @@ fieldGroups:
   b634b1e1-16cf-4b5d-a699-b1eca70df78e:
     name: Books
 fields:
+  02ae1e22-9846-40c0-be62-2fbd5aae5f51:
+    contentColumnType: text
+    fieldGroup: b1bb3583-4f95-4b0d-8a59-ae8388de865d
+    handle: altTag
+    instructions: 'Describe the photo for screen readers. (not shown on screen)'
+    name: 'Alt Tag'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: '1'
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   11612cce-25e1-48fc-856e-b8644b3f3525:
     contentColumnType: text
     fieldGroup: 6b2436d8-2d4f-4d42-86f7-234715c4d4a8
@@ -36,7 +53,103 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  14b21fce-76ea-4ff9-8ffb-bc5ea09143d4:
+  2771aa94-f3bf-474c-be7f-fed584e7126c:
+    contentColumnType: string
+    fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
+    handle: bookCover
+    instructions: ''
+    name: 'Book Cover'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  5100bf38-4d8d-4b19-bc18-5edb66b098ca:
+    contentColumnType: string
+    fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
+    handle: mediaUrl
+    instructions: 'A link to the interview or feature (if available)'
+    name: 'Media URL'
+    searchable: true
+    settings:
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  55966daf-2033-4b99-ad2b-774d66a9e341:
+    contentColumnType: string
+    fieldGroup: b1bb3583-4f95-4b0d-8a59-ae8388de865d
+    handle: photo
+    instructions: ''
+    name: Photo
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  57f26e01-797a-48fd-9fd5-ba521e3b3bcc:
+    contentColumnType: text
+    fieldGroup: 465060e2-328c-4e59-a7bd-a48e039ecd70
+    handle: endorsementName
+    instructions: "Name of the person giving the endorsement\r\n"
+    name: 'Endorsement Name'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  58e0db3e-a67b-4e81-862d-4234f74459fd:
+    contentColumnType: text
+    fieldGroup: b1bb3583-4f95-4b0d-8a59-ae8388de865d
+    handle: titleTag
+    instructions: 'Both for SEO and a caption.'
+    name: 'Title Tag'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: '1'
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5ec5c781-6da7-475d-98a5-855e86dafa48:
     contentColumnType: string
     fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
     handle: mediaLogo
@@ -44,28 +157,23 @@ fields:
     name: 'Media Logo'
     searchable: true
     settings:
-      contentTable: '{{%matrixcontent_medialogo}}'
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
     translationKeyFormat: null
     translationMethod: site
-    type: craft\fields\Matrix
-  1ee97476-107e-450a-8157-73cdc81418f5:
-    contentColumnType: string
-    fieldGroup: 4daca8ac-ce16-48aa-9e24-9dacdbcb1843
-    handle: authorMatrix
-    instructions: ''
-    name: 'Author Matrix'
-    searchable: true
-    settings:
-      contentTable: '{{%matrixcontent_authormatrix}}'
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Matrix
+    type: craft\fields\Assets
   634ad71d-37df-4ce2-8b21-528f030dfcd8:
     contentColumnType: string
     fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
@@ -98,6 +206,40 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  847e0e2e-5f08-45bf-8315-f62c8cb480b2:
+    contentColumnType: text
+    fieldGroup: 465060e2-328c-4e59-a7bd-a48e039ecd70
+    handle: endorsementBody
+    instructions: 'The content of the endorsement (do not include open/close quotes)'
+    name: 'Endorsement Body'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8f522217-b044-4d8d-8e4d-58fbc783f436:
+    contentColumnType: text
+    fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
+    handle: subTitle
+    instructions: ''
+    name: 'Sub Title'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   925bc3a5-795b-4bf2-a030-7d9066fea92d:
     contentColumnType: text
     fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
@@ -115,21 +257,52 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  a744a7dc-9b48-4765-b226-2437ef4932d9:
-    contentColumnType: string
-    fieldGroup: b1bb3583-4f95-4b0d-8a59-ae8388de865d
-    handle: galleryMatrix
-    instructions: ''
-    name: 'Gallery Matrix'
+  9b688ed2-b20a-4af6-8e31-dcd8d0e272ee:
+    contentColumnType: text
+    fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
+    handle: bookHook
+    instructions: 'Single sentence that hooks the reader.'
+    name: Hook
     searchable: true
     settings:
-      contentTable: '{{%matrixcontent_gallerymatrix}}'
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
+      charLimit: '200'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Matrix
+    translationMethod: none
+    type: craft\fields\PlainText
+  a250d724-7fdb-4e6a-b26c-91c4245b8126:
+    contentColumnType: string
+    fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
+    handle: amazonUrl
+    instructions: 'The full URL to link to Amazon.'
+    name: 'Amazon URL'
+    searchable: true
+    settings:
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  a62f7813-fe70-4c1b-999f-80ebfd5119d2:
+    contentColumnType: text
+    fieldGroup: 4daca8ac-ce16-48aa-9e24-9dacdbcb1843
+    handle: authorBio
+    instructions: ''
+    name: 'Author Bio'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   aaae8cf4-f93e-4153-80a4-86c935457baf:
     contentColumnType: text
     fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
@@ -162,169 +335,94 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
-  e8eb3654-1712-430f-a573-94f6ce09ba25:
-    contentColumnType: string
-    fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
-    handle: upcomingBooks
-    instructions: ''
-    name: 'Upcoming Books'
-    searchable: true
-    settings:
-      contentTable: '{{%matrixcontent_upcomingbooks}}'
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Matrix
-  ff5357e8-b1d8-4aae-a85e-c5c7cdb843da:
-    contentColumnType: string
+  d7a86941-08c2-470d-b6dd-63deeb5e7436:
+    contentColumnType: text
     fieldGroup: 465060e2-328c-4e59-a7bd-a48e039ecd70
-    handle: praiseQuote
-    instructions: 'The body of the endorsement (omit quote marks)'
-    name: 'Praise Quote'
+    handle: endorsementLocation
+    instructions: 'Location of the person giving the endorsement. Include city, state. (e.g. Spokane, Washington)'
+    name: 'Endorsement Location'
     searchable: true
     settings:
-      contentTable: '{{%matrixcontent_praisequote}}'
-      localizeBlocks: false
-      maxBlocks: ''
-      minBlocks: ''
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Matrix
+    translationMethod: none
+    type: craft\fields\PlainText
+  dc8388d5-c926-4ef9-bfd5-2bbcfab3a933:
+    contentColumnType: text
+    fieldGroup: 465060e2-328c-4e59-a7bd-a48e039ecd70
+    handle: endorsementTitle
+    instructions: 'Title of the person giving the endorsement. Include commas if there are multiple titles (e.g. Wife, Science Teacher)'
+    name: 'Endorsement Title'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fc260f8a-101b-4fd3-af27-66c2b99c098b:
+    contentColumnType: boolean
+    fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
+    handle: comingSoon
+    instructions: ''
+    name: 'Coming soon'
+    searchable: true
+    settings:
+      default: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+imageTransforms:
+  48bb2127-763b-4d02-ad5f-0e37db6e967d:
+    format: null
+    handle: galleryThumb
+    height: '300'
+    interlace: none
+    mode: crop
+    name: 'Gallery Thumb'
+    position: center-center
+    quality: '30'
+    width: '300'
+  5921435f-f573-4d1c-a65b-60868f794f92:
+    format: null
+    handle: galleryFull
+    height: ''
+    interlace: none
+    mode: fit
+    name: 'Gallery Full'
+    position: center-center
+    quality: null
+    width: '800'
+  8c5d004e-1364-4297-bfae-6a4ee6143b80:
+    format: null
+    handle: mediaThumb
+    height: '90'
+    interlace: none
+    mode: fit
+    name: 'Media Thumb'
+    position: center-center
+    quality: '82'
+    width: '180'
+  aa09a0a7-716c-4781-9392-a47a718765e9:
+    format: jpg
+    handle: bookJacketThumb
+    height: ''
+    interlace: none
+    mode: crop
+    name: 'Book Jacket Thumb'
+    position: center-center
+    quality: null
+    width: '180'
 matrixBlockTypes:
-  027283ae-a0b6-4279-8870-e1dc6b4dfb8f:
-    field: 1ee97476-107e-450a-8157-73cdc81418f5
-    fieldLayouts:
-      463c9f8b-8f79-44b0-847b-f60e19341859:
-        tabs:
-          -
-            fields:
-              d841268a-25c9-4f25-9569-9e9ff1c5a07e:
-                required: '1'
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      d841268a-25c9-4f25-9569-9e9ff1c5a07e:
-        contentColumnType: string
-        fieldGroup: null
-        handle: authorPhoto
-        instructions: ''
-        name: 'Author Photo'
-        searchable: '1'
-        settings:
-          allowedKinds:
-            - image
-          defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
-          defaultUploadLocationSubpath: ''
-          limit: ''
-          localizeRelations: false
-          restrictFiles: '1'
-          selectionLabel: ''
-          singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
-          singleUploadLocationSubpath: ''
-          source: null
-          sources: '*'
-          targetSiteId: null
-          useSingleFolder: ''
-          viewMode: list
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Assets
-    handle: authorBlock
-    name: 'Author Block'
-    sortOrder: 1
-  35a33c84-e97f-48a0-b511-e59ec56b33d0:
-    field: e8eb3654-1712-430f-a573-94f6ce09ba25
-    fieldLayouts:
-      8e5cfc2b-30c4-425e-bd84-63e00f21926c:
-        tabs:
-          -
-            fields:
-              3c95b686-10bc-4b06-8175-94ff920c8858:
-                required: true
-                sortOrder: 1
-              95545106-5c87-40a7-b8b4-64e26029fd55:
-                required: true
-                sortOrder: 2
-            name: Content
-            sortOrder: 1
-    fields:
-      3c95b686-10bc-4b06-8175-94ff920c8858:
-        contentColumnType: text
-        fieldGroup: null
-        handle: buttonCopy
-        instructions: 'What the button says'
-        name: 'Button Copy'
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-      95545106-5c87-40a7-b8b4-64e26029fd55:
-        contentColumnType: string
-        fieldGroup: null
-        handle: buttonUrl
-        instructions: 'Where the user goes after they click.'
-        name: 'Button URL'
-        searchable: true
-        settings:
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\Url
-    handle: ctaButton
-    name: 'CTA Button'
-    sortOrder: 2
-  5e65b273-55e8-4ab0-a29f-e28bd4e31dcc:
-    field: 14b21fce-76ea-4ff9-8ffb-bc5ea09143d4
-    fieldLayouts:
-      e29db257-13ee-4c9f-93fe-682f6ff589d4:
-        tabs:
-          -
-            fields:
-              5152d13d-4706-41d1-9198-689b3e9b67a2:
-                required: true
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      5152d13d-4706-41d1-9198-689b3e9b67a2:
-        contentColumnType: string
-        fieldGroup: null
-        handle: mediaLogo
-        instructions: ''
-        name: 'Media Logo'
-        searchable: true
-        settings:
-          allowedKinds:
-            - image
-          defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
-          defaultUploadLocationSubpath: ''
-          limit: ''
-          localizeRelations: false
-          restrictFiles: '1'
-          selectionLabel: ''
-          singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
-          singleUploadLocationSubpath: ''
-          source: null
-          sources: '*'
-          targetSiteId: null
-          useSingleFolder: ''
-          viewMode: list
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Assets
-    handle: featuredMedia
-    name: 'Featured Media'
-    sortOrder: 1
   6d319299-98a3-4803-aa15-33f06f4a2204:
     field: c76cde9f-3a1b-4179-a992-d79f80f108e0
     fieldLayouts:
@@ -373,152 +471,6 @@ matrixBlockTypes:
     handle: buttonBlock
     name: 'Button Block'
     sortOrder: 1
-  82ed4221-40bf-4416-8882-197e198edbd2:
-    field: ff5357e8-b1d8-4aae-a85e-c5c7cdb843da
-    fieldLayouts:
-      22262c3b-ce70-4e74-972a-8ef0deea8806:
-        tabs:
-          -
-            fields:
-              0588d0eb-b56a-4d56-b5e8-481864c8ad44:
-                required: true
-                sortOrder: 2
-              0bdebbe2-fbdb-4685-9ea8-b6c01424789f:
-                required: true
-                sortOrder: 3
-              e475f897-9cbd-4925-8839-e5d0db80cdeb:
-                required: true
-                sortOrder: 4
-              ef0a327c-f97e-45c6-b584-759f6c4cac69:
-                required: true
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      0588d0eb-b56a-4d56-b5e8-481864c8ad44:
-        contentColumnType: text
-        fieldGroup: null
-        handle: praiseName
-        instructions: 'Name of person who gave the endorsement'
-        name: Name
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-      0bdebbe2-fbdb-4685-9ea8-b6c01424789f:
-        contentColumnType: text
-        fieldGroup: null
-        handle: praiseTitle
-        instructions: "Title of the person giving the endorsement (multiple titles are okay —\_just add commas)"
-        name: Title
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-      e475f897-9cbd-4925-8839-e5d0db80cdeb:
-        contentColumnType: text
-        fieldGroup: null
-        handle: praiseLocation
-        instructions: 'Where the person is from.'
-        name: Location
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-      ef0a327c-f97e-45c6-b584-759f6c4cac69:
-        contentColumnType: text
-        fieldGroup: null
-        handle: praiseBody
-        instructions: 'The content of the endorsement '
-        name: 'Praise body'
-        searchable: true
-        settings:
-          charLimit: '350'
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: '1'
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-    handle: praiseBlock
-    name: 'Praise Block'
-    sortOrder: 1
-  c29da43c-48ae-4eec-b420-e119056865c8:
-    field: e8eb3654-1712-430f-a573-94f6ce09ba25
-    fieldLayouts:
-      0e7d56a8-5739-4802-b960-b44465801246:
-        tabs:
-          -
-            fields:
-              5172b8cc-39ad-4c34-a619-4b4ab96fda24:
-                required: true
-                sortOrder: 2
-              98194ea3-7dd3-45ff-8b1f-1d01109cd293:
-                required: true
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      5172b8cc-39ad-4c34-a619-4b4ab96fda24:
-        contentColumnType: text
-        fieldGroup: null
-        handle: bookExcerpt
-        instructions: 'Short snippet about the book. (150 word limit)'
-        name: 'Book Excerpt'
-        searchable: true
-        settings:
-          charLimit: '150'
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: '1'
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-      98194ea3-7dd3-45ff-8b1f-1d01109cd293:
-        contentColumnType: text
-        fieldGroup: null
-        handle: bookTitle
-        instructions: 'Name of the book'
-        name: 'Book Title'
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-    handle: bookBlock
-    name: 'Book Block'
-    sortOrder: 1
   c3727562-7da1-4abc-9047-66d71de1c716:
     field: 634ad71d-37df-4ce2-8b21-528f030dfcd8
     fieldLayouts:
@@ -527,13 +479,13 @@ matrixBlockTypes:
           -
             fields:
               743791d2-ffc6-4442-b77b-1b5d93186fdd:
-                required: true
+                required: '1'
                 sortOrder: 1
               c88e957a-9abb-450f-9767-41e2a461fd0f:
-                required: true
+                required: '1'
                 sortOrder: 2
               d2efb1fc-2d74-4744-9817-073ec599fa85:
-                required: false
+                required: '0'
                 sortOrder: 3
             name: Content
             sortOrder: 1
@@ -544,7 +496,7 @@ matrixBlockTypes:
         handle: coverImage
         instructions: ''
         name: 'Cover Image'
-        searchable: true
+        searchable: '1'
         settings:
           allowedKinds: null
           defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
@@ -569,7 +521,7 @@ matrixBlockTypes:
         handle: altTag
         instructions: ''
         name: 'Alt Tag'
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: ''
           code: ''
@@ -586,7 +538,7 @@ matrixBlockTypes:
         handle: titleTag
         instructions: ''
         name: 'Title Tag'
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: ''
           code: ''
@@ -600,88 +552,17 @@ matrixBlockTypes:
     handle: coverBlock
     name: 'Cover Block'
     sortOrder: 1
-  dcff228a-34d4-4bb3-a6e2-d4da1a89ed15:
-    field: a744a7dc-9b48-4765-b226-2437ef4932d9
-    fieldLayouts:
-      529fd671-62d0-4830-b7b1-a90b7e57e756:
-        tabs:
-          -
-            fields:
-              0a144a17-7c3d-46f3-8d9d-c8349a65d893:
-                required: false
-                sortOrder: 1
-              bb34b68f-0f34-4448-bb24-a95481809af7:
-                required: false
-                sortOrder: 2
-              dbc18179-babd-44b9-a069-d232f057890f:
-                required: false
-                sortOrder: 3
-            name: Content
-            sortOrder: 1
-    fields:
-      0a144a17-7c3d-46f3-8d9d-c8349a65d893:
-        contentColumnType: string
-        fieldGroup: null
-        handle: image
-        instructions: ''
-        name: Image
-        searchable: true
-        settings:
-          allowedKinds:
-            - image
-          defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
-          defaultUploadLocationSubpath: gallery
-          limit: ''
-          localizeRelations: false
-          restrictFiles: '1'
-          selectionLabel: ''
-          singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
-          singleUploadLocationSubpath: ''
-          source: null
-          sources: '*'
-          targetSiteId: null
-          useSingleFolder: ''
-          viewMode: list
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Assets
-      bb34b68f-0f34-4448-bb24-a95481809af7:
-        contentColumnType: text
-        fieldGroup: null
-        handle: altText
-        instructions: 'Photo Caption (and also used for SEO purposes and screen readers)'
-        name: 'Alt text'
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-      dbc18179-babd-44b9-a069-d232f057890f:
-        contentColumnType: text
-        fieldGroup: null
-        handle: imageTitle
-        instructions: "Title of your image\r\n"
-        name: 'Image title '
-        searchable: true
-        settings:
-          charLimit: ''
-          code: ''
-          columnType: text
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
-    handle: imageBlock
-    name: 'Image Block'
-    sortOrder: 1
+plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of '
+      prependSubject: 'New message from An Impossible Life'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: andrew@circa42.com
 sections:
   007eba9c-147a-4aa9-8f4f-dc06486f7673:
     enableVersioning: true
@@ -722,6 +603,218 @@ sections:
         template: index
         uriFormat: /
     type: single
+  26a7bf24-335a-48e9-bafd-3a6852195e7e:
+    enableVersioning: true
+    entryTypes:
+      054451f1-f8e1-4e3a-9413-ac768fd0c4a7:
+        fieldLayouts:
+          21d3ab2e-090f-439f-9474-624741106287:
+            tabs:
+              -
+                fields:
+                  2771aa94-f3bf-474c-be7f-fed584e7126c:
+                    required: false
+                    sortOrder: 3
+                  8f522217-b044-4d8d-8e4d-58fbc783f436:
+                    required: false
+                    sortOrder: 1
+                  9b688ed2-b20a-4af6-8e31-dcd8d0e272ee:
+                    required: false
+                    sortOrder: 2
+                  a250d724-7fdb-4e6a-b26c-91c4245b8126:
+                    required: false
+                    sortOrder: 5
+                  fc260f8a-101b-4fd3-af27-66c2b99c098b:
+                    required: false
+                    sortOrder: 4
+                name: Books
+                sortOrder: 1
+        handle: books
+        hasTitleField: true
+        name: Books
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Book Title'
+    handle: books
+    name: Books
+    propagateEntries: true
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        template: _entry
+        uriFormat: 'books/{slug}'
+    structure:
+      maxLevels: ''
+      uid: 915e685a-6822-43b4-ad71-352e9b846543
+    type: structure
+  35fcf569-777b-4163-9129-4078455ac448:
+    enableVersioning: true
+    entryTypes:
+      9e374f71-27bc-4e93-8adb-ea15a8c792c2:
+        handle: blog
+        hasTitleField: true
+        name: Blog
+        sortOrder: 1
+        titleFormat: null
+        titleLabel: Title
+      c7b45ac8-2480-4cbc-81fa-4ad9e3698b02:
+        fieldLayouts:
+          b065acaa-b046-4a04-9ec3-8c2d911ce002:
+            tabs:
+              -
+                fields:
+                  5100bf38-4d8d-4b19-bc18-5edb66b098ca:
+                    required: false
+                    sortOrder: 2
+                  5ec5c781-6da7-475d-98a5-855e86dafa48:
+                    required: false
+                    sortOrder: 1
+                name: Media
+                sortOrder: 1
+        handle: featuredMedia
+        hasTitleField: true
+        name: 'Featured Media'
+        sortOrder: 2
+        titleFormat: ''
+        titleLabel: Title
+    handle: blog
+    name: Blog
+    propagateEntries: true
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        template: _entry
+        uriFormat: 'blog/{slug}'
+    type: channel
+  51316ff1-10d6-4586-b820-20e12e2b16c4:
+    enableVersioning: true
+    entryTypes:
+      d7e96539-7159-4ce9-924c-77d37760347f:
+        fieldLayouts:
+          9c762ae8-ac34-40f4-9683-cf3523c437b5:
+            tabs:
+              -
+                fields:
+                  57f26e01-797a-48fd-9fd5-ba521e3b3bcc:
+                    required: false
+                    sortOrder: 2
+                  847e0e2e-5f08-45bf-8315-f62c8cb480b2:
+                    required: false
+                    sortOrder: 1
+                  d7a86941-08c2-470d-b6dd-63deeb5e7436:
+                    required: false
+                    sortOrder: 4
+                  dc8388d5-c926-4ef9-bfd5-2bbcfab3a933:
+                    required: false
+                    sortOrder: 3
+                name: Praise
+                sortOrder: 1
+        handle: praise
+        hasTitleField: false
+        name: Praise
+        sortOrder: 1
+        titleFormat: '{endorsementName}'
+        titleLabel: Title
+    handle: praise
+    name: Praise
+    propagateEntries: true
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        template: _entry
+        uriFormat: 'praise/{slug}'
+    structure:
+      maxLevels: ''
+      uid: 8ef67038-6e95-4c90-afc8-791f1d8c0183
+    type: structure
+  a55c5465-4061-4c5e-bc25-a3e9197f426f:
+    enableVersioning: true
+    entryTypes:
+      3a578427-b96c-4352-a1f9-ac66d9005fdc:
+        handle: extras
+        hasTitleField: true
+        name: Extras
+        sortOrder: 2
+        titleFormat: null
+        titleLabel: Title
+      feb2be83-6093-4fc0-b6ab-963e1f65377f:
+        fieldLayouts:
+          5c43c9cb-d781-4d5e-94c9-efbd98d06922:
+            tabs:
+              -
+                fields:
+                  02ae1e22-9846-40c0-be62-2fbd5aae5f51:
+                    required: false
+                    sortOrder: 2
+                  55966daf-2033-4b99-ad2b-774d66a9e341:
+                    required: false
+                    sortOrder: 1
+                  58e0db3e-a67b-4e81-862d-4234f74459fd:
+                    required: false
+                    sortOrder: 3
+                name: Gallery
+                sortOrder: 1
+        handle: photos
+        hasTitleField: true
+        name: Photos
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Internal Title'
+    handle: extras
+    name: Extras
+    propagateEntries: true
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        template: _entry
+        uriFormat: 'extras/{slug}'
+    structure:
+      maxLevels: ''
+      uid: de7d3b06-1de4-4042-b899-6def7b167b34
+    type: structure
+  f687c0b4-a72c-4e51-a993-1d344eff2696:
+    enableVersioning: true
+    entryTypes:
+      a9e937d5-122e-43df-8b49-a5b3e25dcf10:
+        fieldLayouts:
+          5beea7ba-6357-431d-a391-8f1785b64210:
+            tabs:
+              -
+                fields:
+                  02ae1e22-9846-40c0-be62-2fbd5aae5f51:
+                    required: false
+                    sortOrder: 3
+                  55966daf-2033-4b99-ad2b-774d66a9e341:
+                    required: false
+                    sortOrder: 2
+                  a62f7813-fe70-4c1b-999f-80ebfd5119d2:
+                    required: false
+                    sortOrder: 1
+                name: Authors
+                sortOrder: 1
+        handle: authors
+        hasTitleField: true
+        name: Authors
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: authors
+    name: Authors
+    propagateEntries: true
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        template: _entry
+        uriFormat: 'authors/{slug}'
+    structure:
+      maxLevels: ''
+      uid: 8b30888a-2335-4ba5-b168-fcf6afd01c35
+    type: structure
 siteGroups:
   b33a47af-8b04-4634-b8f8-f29c74af73f7:
     name: 'An Impossible Life'
