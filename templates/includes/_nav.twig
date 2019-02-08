@@ -35,9 +35,11 @@
           <a href="#praise" class="block mt-4 lg:inline-block lg:mt-0 text-base hover:text-grey-light text-white text-base font-serif uppercase no-underline mr-4">
             Praise
           </a>
+{% if craft.entries.section('blog').type('featuredMedia').ids() %}
           <a href="#media" class="block mt-4 lg:inline-block lg:mt-0 text-base hover:text-grey-light text-white text-base font-serif uppercase no-underline mr-4">
             Media
           </a>
+{% endif %}
           <a href="#photos" class="block mt-4 lg:inline-block lg:mt-0 text-base hover:text-grey-light text-white text-base font-serif uppercase no-underline mr-4">
             Photos
           </a>

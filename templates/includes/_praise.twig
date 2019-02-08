@@ -12,12 +12,15 @@
 
       <div class="w-full sm:w-1/2 lg:w-1/4 flex flex-col p-4">
       <i class="fas fa-quote-left text-grey-light"></i>
-      <p class="leading-normal text-left mb-4 text-grey-darkest">
+      <p class="leading-normal text-xl text-left mb-4 text-grey-darkest">
         &ldquo;
           {{ entry.endorsementBody }}
         &rdquo;</p>
-        <p class="my-4 text-sm italic text-right text-grey-dark">
-          — {{ entry.endorsementName }}, {{ entry.endorsementTitle }}<br>
+        <p class="my-4 text-base italic text-right text-grey-dark">
+          <span class="uppercase roman text-grey-darker tracking-wide font-bold">
+          — {{ entry.endorsementName }}<br>
+          </span>
+          {{ entry.endorsementTitle }}<br>
           {{ entry.endorsementLocation }}
         </p>
       </div>
