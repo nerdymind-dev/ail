@@ -27,8 +27,9 @@
 
     {% set blocks = entry.coverMatrix %}
     {% set matrixBlocks = blocks.one() %}
-        {% for block in blocks %}          
-          {% for asset in block.coverImage.all() %}
+        {% for block in blocks %}
+          {% set coverImage = block.coverImage.all() %}          
+          {% for asset in coverImage %}
             {% if asset %}
               <div class="md:w-1/2 xs:px-10 sm:px-32 md:px-8 md:pl-16">
                 <img src="{{ asset.getUrl }}" alt="image" class=" shadow-md">

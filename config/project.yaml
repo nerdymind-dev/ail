@@ -1,4 +1,4 @@
-dateModified: 1549585022
+dateModified: 1549923525
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -829,7 +829,7 @@ sites:
     siteGroup: b33a47af-8b04-4634-b8f8-f29c74af73f7
     sortOrder: 1
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'An Impossible Life'
   schemaVersion: 3.1.23
