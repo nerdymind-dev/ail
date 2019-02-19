@@ -14,7 +14,7 @@
       </p>
 
 
-      {% for block in entry.ctaButton %}
+      {% for block in entry.ctaButton.all() %}
           {% if block.type == "buttonBlock" %}
             <a href="{{ block.buttonUrl }}" target="_blank">
               <button class="bg-red-darker shadow hover:bg-white text-white font-semibold hover:text-red-darker py-2 text-xl rounded px-8 border-white border hover:border-red-darker">
@@ -27,7 +27,7 @@
 
     {% set blocks = entry.coverMatrix %}
     {% set matrixBlocks = blocks.one() %}
-        {% for block in blocks %}
+        {% for block in blocks.all() %}
           {% set coverImage = block.coverImage.all() %}          
           {% for asset in coverImage %}
             {% if asset %}

@@ -1,0 +1,52 @@
+{% extends '_base.twig' %}
+
+{% block body %}
+
+<div class="max-w-xl m-auto p-8 my-12">
+<h1 class="text-5xl py-4">{{ entry.title }}</h1>
+
+	{% for block in entry.blogContent %}
+		{% if block.type == "textBlock" %}
+			<h2 class="text-3xl text-grey-dark italic">{{ block.subHead }}</h2>
+			<div class="text-xl leading-normal py-4">
+				{{ block.text |nl2br }}
+			</div>
+		
+		{% elseif block.type == "imageBlock" %}
+	 		{% set image = block.image.one() %}
+		 	<div class="my-8">
+		 		<div class="text-center m-4">
+		 			<img class="shadow-lg" src="{{ image.getUrl('blogCrop') }}" alt=""> 
+		 		</div>
+		 		
+				 	
+				<p class="text-center uppercase text-grey">
+					{{ block.caption }}
+				</p>
+			</div>
+
+		{% elseif block.type == "linkBlock" %}
+			{% set logo = block.logoLink.one() %}
+				<a href="{{ block.urlLink }}" class="no-underline no-underline text-black hover:text-grey-darker">
+					<div class="flex flex-col justify-center item-center max-w-sm m-auto text-center my-8
+					{% if not loop.last %}
+						border-b border-gray pb-8 
+					{% endif %}
+					">
+						<div>
+							<img src="{{ logo.getUrl('mediaThumb') }}" alt="">
+							
+						</div>
+						<h4 class="p-8 text-3xl bold py-4">
+							{{ block.titleLink }}
+						</h4>
+						<p class="text-gray-darkest text-xl">{{ block.linkDescription }}</p>
+					</div>
+				</a>
+		
+		{% endif %}
+
+	{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-dateModified: 1549923525
+dateModified: 1550541946
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -18,6 +18,8 @@ fieldGroups:
     name: Gallery
   b634b1e1-16cf-4b5d-a699-b1eca70df78e:
     name: Books
+  f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5:
+    name: Blog
 fields:
   02ae1e22-9846-40c0-be62-2fbd5aae5f51:
     contentColumnType: text
@@ -286,6 +288,21 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Url
+  a38796c9-3fb0-4cf8-b37e-a98871bb2293:
+    contentColumnType: string
+    fieldGroup: 6b2436d8-2d4f-4d42-86f7-234715c4d4a8
+    handle: socialMediaMatrix
+    instructions: ''
+    name: 'Social Media Matrix'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_socialmediamatrix}}'
+      localizeBlocks: false
+      maxBlocks: ''
+      minBlocks: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
   a62f7813-fe70-4c1b-999f-80ebfd5119d2:
     contentColumnType: text
     fieldGroup: 4daca8ac-ce16-48aa-9e24-9dacdbcb1843
@@ -320,6 +337,21 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  b814263d-8af7-4f61-aed2-355857bb9bcd:
+    contentColumnType: string
+    fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
+    handle: blogContent
+    instructions: ''
+    name: 'Blog Content'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_blogcontent}}'
+      localizeBlocks: false
+      maxBlocks: ''
+      minBlocks: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
   c76cde9f-3a1b-4179-a992-d79f80f108e0:
     contentColumnType: string
     fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
@@ -381,6 +413,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+globalSets:
+  7db3c8ae-7eab-4999-933f-031fe5ae09d4:
+    fieldLayouts:
+      a36b474c-2efa-45e4-b8fd-7503d26f1485:
+        tabs:
+          -
+            fields:
+              a38796c9-3fb0-4cf8-b37e-a98871bb2293:
+                required: false
+                sortOrder: 1
+            name: 'Tab 1'
+            sortOrder: 1
+    handle: social
+    name: Social
 imageTransforms:
   48bb2127-763b-4d02-ad5f-0e37db6e967d:
     format: null
@@ -422,7 +468,76 @@ imageTransforms:
     position: center-center
     quality: null
     width: '180'
+  b7fa6335-d517-4555-9ab8-117e87f033b2:
+    format: null
+    handle: blogCrop
+    height: ''
+    interlace: none
+    mode: crop
+    name: 'Blog crop'
+    position: center-center
+    quality: null
+    width: '600'
 matrixBlockTypes:
+  66d909df-fa6f-4039-87e5-6b8774697ee9:
+    field: a38796c9-3fb0-4cf8-b37e-a98871bb2293
+    fieldLayouts:
+      f043540f-dad1-408a-a7c7-e417594b9485:
+        tabs:
+          -
+            fields:
+              0f0555b4-cf1d-41aa-85a8-811ca43b652f:
+                required: '1'
+                sortOrder: 2
+              5cd935cb-e833-4fac-8820-d002b4b6b697:
+                required: '1'
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      0f0555b4-cf1d-41aa-85a8-811ca43b652f:
+        contentColumnType: string
+        fieldGroup: null
+        handle: socialChannel
+        instructions: ''
+        name: 'Social Channel'
+        searchable: '1'
+        settings:
+          options:
+            -
+              default: ''
+              label: Facebook
+              value: facebook
+            -
+              default: ''
+              label: Instagram
+              value: instagram
+            -
+              default: ''
+              label: Twitter
+              value: twitter
+            -
+              default: ''
+              label: Amazon
+              value: amazon
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
+      5cd935cb-e833-4fac-8820-d002b4b6b697:
+        contentColumnType: string
+        fieldGroup: null
+        handle: socialUrl
+        instructions: ''
+        name: 'Social URL'
+        searchable: '1'
+        settings:
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Url
+    handle: socialBlock
+    name: 'Social Block'
+    sortOrder: 1
   6d319299-98a3-4803-aa15-33f06f4a2204:
     field: c76cde9f-3a1b-4179-a992-d79f80f108e0
     fieldLayouts:
@@ -471,6 +586,121 @@ matrixBlockTypes:
     handle: buttonBlock
     name: 'Button Block'
     sortOrder: 1
+  9970b50f-8e1f-456e-acac-48ef400cdf17:
+    field: b814263d-8af7-4f61-aed2-355857bb9bcd
+    fieldLayouts:
+      4d667502-70fb-4272-88f5-c28ff92e8835:
+        tabs:
+          -
+            fields:
+              4823590b-e4a7-49cb-8bed-0a42d7dd10b5:
+                required: false
+                sortOrder: 1
+              5d18de3a-8113-4126-b879-31ec1b7aaf12:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      4823590b-e4a7-49cb-8bed-0a42d7dd10b5:
+        contentColumnType: text
+        fieldGroup: null
+        handle: subHead
+        instructions: ''
+        name: Subhead
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      5d18de3a-8113-4126-b879-31ec1b7aaf12:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: Text
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: textBlock
+    name: 'Text Block'
+    sortOrder: 1
+  baeca08f-0b93-473a-9c74-918b916e4bba:
+    field: b814263d-8af7-4f61-aed2-355857bb9bcd
+    fieldLayouts:
+      d73d3c0b-49f8-4c0c-91bc-78b5a7f25668:
+        tabs:
+          -
+            fields:
+              207e5185-4e7e-4e65-ab63-354e684ccf75:
+                required: true
+                sortOrder: 1
+              b6a1a9e3-4d2e-4d34-8e92-cd5f12889ca4:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      207e5185-4e7e-4e65-ab63-354e684ccf75:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      b6a1a9e3-4d2e-4d34-8e92-cd5f12889ca4:
+        contentColumnType: text
+        fieldGroup: null
+        handle: caption
+        instructions: ''
+        name: Caption
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: imageBlock
+    name: 'Image Block'
+    sortOrder: 2
   c3727562-7da1-4abc-9047-66d71de1c716:
     field: 634ad71d-37df-4ce2-8b21-528f030dfcd8
     fieldLayouts:
@@ -552,17 +782,112 @@ matrixBlockTypes:
     handle: coverBlock
     name: 'Cover Block'
     sortOrder: 1
+  e761f881-ef3b-4f5e-afa1-db2872314059:
+    field: b814263d-8af7-4f61-aed2-355857bb9bcd
+    fieldLayouts:
+      80c3d625-fea7-4642-b221-1832b30300d8:
+        tabs:
+          -
+            fields:
+              0229deb1-4d17-4c72-894a-19636fb6a1b1:
+                required: true
+                sortOrder: 3
+              4db900f8-675f-43b8-b428-323de4ae156c:
+                required: true
+                sortOrder: 4
+              67f9f3e1-6928-44b5-8352-44166653a700:
+                required: true
+                sortOrder: 1
+              d84e8500-8e31-435e-b92a-98d173ccf443:
+                required: true
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      0229deb1-4d17-4c72-894a-19636fb6a1b1:
+        contentColumnType: text
+        fieldGroup: null
+        handle: urlLink
+        instructions: ''
+        name: 'URL Link'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      4db900f8-675f-43b8-b428-323de4ae156c:
+        contentColumnType: text
+        fieldGroup: null
+        handle: linkDescription
+        instructions: ''
+        name: 'Link Description'
+        searchable: true
+        settings:
+          charLimit: '380'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      67f9f3e1-6928-44b5-8352-44166653a700:
+        contentColumnType: text
+        fieldGroup: null
+        handle: titleLink
+        instructions: 'Typically the title of the article'
+        name: 'Article title'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      d84e8500-8e31-435e-b92a-98d173ccf443:
+        contentColumnType: string
+        fieldGroup: null
+        handle: logoLink
+        instructions: ''
+        name: 'Logo Link'
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: linkBlock
+    name: 'Link Block'
+    sortOrder: 3
 plugins:
-  contact-form:
+  redactor:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
-    settings:
-      allowAttachments: ''
-      prependSender: 'On behalf of '
-      prependSubject: 'New message from An Impossible Life'
-      successFlashMessage: 'Your message has been sent.'
-      toEmail: andrew@circa42.com
+    schemaVersion: 2.2.1
 sections:
   007eba9c-147a-4aa9-8f4f-dc06486f7673:
     enableVersioning: true
@@ -652,30 +977,20 @@ sections:
     enableVersioning: true
     entryTypes:
       9e374f71-27bc-4e93-8adb-ea15a8c792c2:
+        fieldLayouts:
+          2373b054-2273-4f6d-bd0c-72a7621752c1:
+            tabs:
+              -
+                fields:
+                  b814263d-8af7-4f61-aed2-355857bb9bcd:
+                    required: false
+                    sortOrder: 1
+                name: Blog
+                sortOrder: 1
         handle: blog
         hasTitleField: true
         name: Blog
         sortOrder: 1
-        titleFormat: null
-        titleLabel: Title
-      c7b45ac8-2480-4cbc-81fa-4ad9e3698b02:
-        fieldLayouts:
-          b065acaa-b046-4a04-9ec3-8c2d911ce002:
-            tabs:
-              -
-                fields:
-                  5100bf38-4d8d-4b19-bc18-5edb66b098ca:
-                    required: false
-                    sortOrder: 2
-                  5ec5c781-6da7-475d-98a5-855e86dafa48:
-                    required: false
-                    sortOrder: 1
-                name: Media
-                sortOrder: 1
-        handle: featuredMedia
-        hasTitleField: true
-        name: 'Featured Media'
-        sortOrder: 2
         titleFormat: ''
         titleLabel: Title
     handle: blog
@@ -685,7 +1000,7 @@ sections:
       294d42da-43a8-438d-8070-ed01a0d18aa1:
         enabledByDefault: true
         hasUrls: true
-        template: _entry
+        template: blog/_entry
         uriFormat: 'blog/{slug}'
     type: channel
   51316ff1-10d6-4586-b820-20e12e2b16c4:
@@ -820,7 +1135,7 @@ siteGroups:
     name: 'An Impossible Life'
 sites:
   294d42da-43a8-438d-8070-ed01a0d18aa1:
-    baseUrl: $DEFAULT_SITE_URL
+    baseUrl: ''
     handle: default
     hasUrls: true
     language: en-US
@@ -832,7 +1147,7 @@ system:
   edition: pro
   live: true
   name: 'An Impossible Life'
-  schemaVersion: 3.1.23
+  schemaVersion: 3.1.25
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
@@ -849,4 +1164,4 @@ volumes:
       path: assets/img
     sortOrder: null
     type: craft\volumes\Local
-    url: '@web/assets/img/'
+    url: /assets/img/

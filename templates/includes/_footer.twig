@@ -1,11 +1,30 @@
 <footer class="font-sans bg-black text-white py-8 px-4">
-  <div class="mx-auto max-w-xl overflow-hidden flex justify-center items-center">
+<div class="flex justify-between mx-auto max-w-xl">	
+	<div class="flex flex-col w-1/3">
+	    <div class="inline-block py-2 px-3 text-grey-darker text-xs"> 
+	      © 2019 An Impossible Life. All rights reserved.
+	    </div>
+	    <div class="mb-4">
+	      <a href="https://circa42.com" class="inline-block py-2 px-3 text-grey-darker text-xs no-underline hover:text-grey" target="_blank">Site designed by circa42 | Portland Craft Developer</a>
+	    </div>
+	</div>
 
-    <div class="inline-block py-2 px-3 text-grey-darker text-xs"> 
-      © 2019 An Impossible Life. All rights reserved.
-    </div>
-    <div>
-      <a href="https://circa42.com" class="inline-block py-2 px-3 text-grey-darker text-xs no-underline hover:text-grey" target="_blank">Site designed by circa42 | Portland Craft Developer</a>
-    </div>
-  </div>
+	<div class="text-4xl justify-right">
+		{% for block in social.socialMediaMatrix %}
+			<a href="{{ block.socialUrl }}" target="_blank" class="text-grey-darker hover:text-grey no-underline p-2">
+				{% switch block.socialChannel %}
+					{% case "facebook" %}
+						<i class="fab fa-facebook"></i>
+					{% case "instagram" %}
+						<i class="fab fa-instagram"></i>
+				{% endswitch %}
+		{% endfor %}
+
+				
+		</a>
+	</div>
+</div>
+
+     
+     
 </footer>
