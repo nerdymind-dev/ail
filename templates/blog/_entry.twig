@@ -5,7 +5,7 @@
 <div class="max-w-xl m-auto p-8 my-12">
 <h1 class="text-5xl py-4">{{ entry.title }}</h1>
 
-	{% for block in entry.blogContent %}
+	{% for block in entry.blogContent.all() %}
 		{% if block.type == "textBlock" %}
 			<h2 class="text-3xl text-grey-dark italic">{{ block.subHead }}</h2>
 			<div class="text-xl leading-normal py-4">

@@ -1,4 +1,4 @@
-{% if craft.entries.section('blog').type('featuredMedia').ids() %}
+{% if craft.entries.section('media').ids() %}
 
 
 
@@ -16,19 +16,17 @@
 	</div>
     <div class="flex flex-wrap justify-center m-auto max-w-xl">
 
-{% set entries = craft.entries.section('blog').limit(4).orderBy('RAND()').all() %}
+{% set entries = craft.entries.section('media').limit(4).orderBy('RAND()').all() %}
 
       {% for entry in entries %}
-        {% if entry.type == 'featuredMedia' %}
-            <div class="text-center w-full sm:w-1/2 md:w-1/4 p-4">
-              <a href="{{ entry.mediaUrl }}" target="_blank">
-                {% set assets = entry.mediaLogo.all() %}
-                  {% for asset in assets %}
-                    <img src="{{ asset.getUrl('mediaThumb') }}">
-                  {% endfor %}
-              </a>
-            </div>
-        {% endif %}
+        <div class="text-center w-full sm:w-1/2 md:w-1/4 p-4">
+          <a href="{{ entry.mediaUrl }}" target="_blank">
+            {% set assets = entry.mediaLogo.all() %}
+              {% for asset in assets %}
+                <img src="{{ asset.getUrl('mediaThumb') }}">
+              {% endfor %}
+          </a>
+        </div>
       {% endfor %}    	
 
 

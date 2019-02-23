@@ -10,7 +10,7 @@
 	</div>
 
 	<div class="text-4xl justify-right">
-		{% for block in social.socialMediaMatrix %}
+		{% for block in social.socialMediaMatrix.all() %}
 			<a href="{{ block.socialUrl }}" target="_blank" class="text-grey-darker hover:text-grey no-underline p-2">
 				{% switch block.socialChannel %}
 					{% case "facebook" %}

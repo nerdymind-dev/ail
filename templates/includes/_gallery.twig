@@ -11,7 +11,7 @@
 
 
   <div class="flex flex-wrap m-auto justify-center">
-  {% set entries = craft.entries.section('extras').all() %}
+  {% set entries = craft.entries.section('photos').all() %}
 
       {% for entry in entries %}
              {% if entry.type == 'photos' %}

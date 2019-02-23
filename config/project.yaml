@@ -1,4 +1,4 @@
-dateModified: 1550541946
+dateModified: 1550887350
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -186,7 +186,7 @@ fields:
     settings:
       contentTable: '{{%matrixcontent_covermatrix}}'
       localizeBlocks: false
-      maxBlocks: ''
+      maxBlocks: '1'
       minBlocks: ''
     translationKeyFormat: null
     translationMethod: site
@@ -401,6 +401,23 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  e964ef45-a1ca-485e-a56b-5f5a309ab3c0:
+    contentColumnType: text
+    fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
+    handle: summary
+    instructions: 'This snippet is a summary of the blog article and appears *only* on the /blog/ listing page, not on the blog entry itself. '
+    name: Summary
+    searchable: true
+    settings:
+      charLimit: '300'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   fc260f8a-101b-4fd3-af27-66c2b99c098b:
     contentColumnType: boolean
     fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
@@ -594,10 +611,10 @@ matrixBlockTypes:
           -
             fields:
               4823590b-e4a7-49cb-8bed-0a42d7dd10b5:
-                required: false
+                required: '0'
                 sortOrder: 1
               5d18de3a-8113-4126-b879-31ec1b7aaf12:
-                required: true
+                required: '1'
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -608,7 +625,7 @@ matrixBlockTypes:
         handle: subHead
         instructions: ''
         name: Subhead
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: ''
           code: ''
@@ -625,7 +642,7 @@ matrixBlockTypes:
         handle: text
         instructions: ''
         name: Text
-        searchable: true
+        searchable: '1'
         settings:
           availableTransforms: '*'
           availableVolumes: '*'
@@ -648,10 +665,10 @@ matrixBlockTypes:
           -
             fields:
               207e5185-4e7e-4e65-ab63-354e684ccf75:
-                required: true
+                required: '1'
                 sortOrder: 1
               b6a1a9e3-4d2e-4d34-8e92-cd5f12889ca4:
-                required: true
+                required: '1'
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -662,7 +679,7 @@ matrixBlockTypes:
         handle: image
         instructions: ''
         name: Image
-        searchable: true
+        searchable: '1'
         settings:
           allowedKinds: null
           defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
@@ -687,7 +704,7 @@ matrixBlockTypes:
         handle: caption
         instructions: ''
         name: Caption
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: ''
           code: ''
@@ -709,13 +726,13 @@ matrixBlockTypes:
           -
             fields:
               743791d2-ffc6-4442-b77b-1b5d93186fdd:
-                required: '1'
+                required: true
                 sortOrder: 1
               c88e957a-9abb-450f-9767-41e2a461fd0f:
-                required: '1'
+                required: true
                 sortOrder: 2
               d2efb1fc-2d74-4744-9817-073ec599fa85:
-                required: '0'
+                required: false
                 sortOrder: 3
             name: Content
             sortOrder: 1
@@ -726,7 +743,7 @@ matrixBlockTypes:
         handle: coverImage
         instructions: ''
         name: 'Cover Image'
-        searchable: '1'
+        searchable: true
         settings:
           allowedKinds: null
           defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
@@ -751,7 +768,7 @@ matrixBlockTypes:
         handle: altTag
         instructions: ''
         name: 'Alt Tag'
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -768,7 +785,7 @@ matrixBlockTypes:
         handle: titleTag
         instructions: ''
         name: 'Title Tag'
-        searchable: '1'
+        searchable: true
         settings:
           charLimit: ''
           code: ''
@@ -790,16 +807,16 @@ matrixBlockTypes:
           -
             fields:
               0229deb1-4d17-4c72-894a-19636fb6a1b1:
-                required: true
+                required: '1'
                 sortOrder: 3
               4db900f8-675f-43b8-b428-323de4ae156c:
-                required: true
+                required: '1'
                 sortOrder: 4
               67f9f3e1-6928-44b5-8352-44166653a700:
-                required: true
+                required: '1'
                 sortOrder: 1
               d84e8500-8e31-435e-b92a-98d173ccf443:
-                required: true
+                required: '1'
                 sortOrder: 2
             name: Content
             sortOrder: 1
@@ -810,7 +827,7 @@ matrixBlockTypes:
         handle: urlLink
         instructions: ''
         name: 'URL Link'
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: ''
           code: ''
@@ -827,7 +844,7 @@ matrixBlockTypes:
         handle: linkDescription
         instructions: ''
         name: 'Link Description'
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: '380'
           code: ''
@@ -844,7 +861,7 @@ matrixBlockTypes:
         handle: titleLink
         instructions: 'Typically the title of the article'
         name: 'Article title'
-        searchable: true
+        searchable: '1'
         settings:
           charLimit: ''
           code: ''
@@ -861,7 +878,7 @@ matrixBlockTypes:
         handle: logoLink
         instructions: ''
         name: 'Logo Link'
-        searchable: true
+        searchable: '1'
         settings:
           allowedKinds: null
           defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
@@ -887,7 +904,7 @@ plugins:
   redactor:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.1
+    schemaVersion: 2.2.2
 sections:
   007eba9c-147a-4aa9-8f4f-dc06486f7673:
     enableVersioning: true
@@ -983,7 +1000,10 @@ sections:
               -
                 fields:
                   b814263d-8af7-4f61-aed2-355857bb9bcd:
-                    required: false
+                    required: true
+                    sortOrder: 2
+                  e964ef45-a1ca-485e-a56b-5f5a309ab3c0:
+                    required: true
                     sortOrder: 1
                 name: Blog
                 sortOrder: 1
@@ -1048,13 +1068,6 @@ sections:
   a55c5465-4061-4c5e-bc25-a3e9197f426f:
     enableVersioning: true
     entryTypes:
-      3a578427-b96c-4352-a1f9-ac66d9005fdc:
-        handle: extras
-        hasTitleField: true
-        name: Extras
-        sortOrder: 2
-        titleFormat: null
-        titleLabel: Title
       feb2be83-6093-4fc0-b6ab-963e1f65377f:
         fieldLayouts:
           5c43c9cb-d781-4d5e-94c9-efbd98d06922:
@@ -1078,18 +1091,54 @@ sections:
         sortOrder: 1
         titleFormat: ''
         titleLabel: 'Internal Title'
-    handle: extras
-    name: Extras
+    handle: photos
+    name: Photos
     propagateEntries: true
     siteSettings:
       294d42da-43a8-438d-8070-ed01a0d18aa1:
         enabledByDefault: true
         hasUrls: true
         template: _entry
-        uriFormat: 'extras/{slug}'
+        uriFormat: 'photos/{slug}'
     structure:
       maxLevels: ''
       uid: de7d3b06-1de4-4042-b899-6def7b167b34
+    type: structure
+  d9dcc2f7-33bb-45a9-a129-bc94402cc8f5:
+    enableVersioning: true
+    entryTypes:
+      94e3759d-14c7-4ea2-a9eb-c2e3516157d7:
+        fieldLayouts:
+          dd15457b-707f-4bcf-99f7-5d8217f8d7e7:
+            tabs:
+              -
+                fields:
+                  5100bf38-4d8d-4b19-bc18-5edb66b098ca:
+                    required: false
+                    sortOrder: 2
+                  5ec5c781-6da7-475d-98a5-855e86dafa48:
+                    required: false
+                    sortOrder: 1
+                name: Media
+                sortOrder: 1
+        handle: media
+        hasTitleField: true
+        name: Media
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: media
+    name: Media
+    propagateEntries: true
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'media/{slug}'
+    structure:
+      maxLevels: ''
+      uid: f68cc4a3-9b63-4156-9f26-766db56ce951
     type: structure
   f687c0b4-a72c-4e51-a993-1d344eff2696:
     enableVersioning: true
