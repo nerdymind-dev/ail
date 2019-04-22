@@ -7,31 +7,53 @@
 
 	<div class="text-center container m-auto"> 
 		<label for="tagline" class="uppercase tracking-wide font-bold text-center text-grey-dark"> 
-			Featured 
+			In the 
 		</label>
 		<h2 class="mt-2 mb-4 font-medium max-w-sm m-auto italic">
 			Media
 		</h2>
 		<hr class="border-b w-8 m-auto my-6">
 	</div>
-    <div class="flex flex-wrap justify-center m-auto max-w-xl">
 
-{% set entries = craft.entries.section('media').limit(4).orderBy('RAND()').all() %}
+{% set entryIds = craft.entries.section('media').ids() %}
 
-      {% for entry in entries %}
-        <div class="text-center w-full sm:w-1/2 md:w-1/4 p-4">
-          <a href="{{ entry.mediaUrl }}" target="_blank">
-            {% set assets = entry.mediaLogo.all() %}
-              {% for asset in assets %}
-                <img src="{{ asset.getUrl('mediaThumb') }}">
-              {% endfor %}
-          </a>
-        </div>
-      {% endfor %}    	
+{% set categories = craft.categories.group('mediaCat').relatedTo(
+  { sourceElement: entryIds }).all() %}
+    {% for category in categories %}
+      <h3  class="uppercase tracking-wide font-bold text-center text-grey-dark mt-4">
+        {{ category }}
+      </h3>
 
+      <div class="flex flex-wrap justify-center m-auto max-w-xl">             
+{% set entries = craft.entries.section('media').relatedTo(category).all() %}      
+      {% if entries|length %}
+        {% for entry in entries %}
+          <div class="text-center w-full sm:w-1/2 md:w-1/4 p-4">
+            
+            <a href="{{ entry.mediaUrl }}" target="_blank" class="no-underline hover:text-grey-darkest text-grey-dark text-2xl">
+              
+              {% set assets = entry.mediaVideoStill.all() %}
+                {% for asset in assets %}
+                  <img src="{{ asset.getUrl('videoThumb') }}" class="mt-4">
+                {% endfor %}
+
+              <span class="mb-2">{{ entry.title }} </span><br>
+              <span class="text-base italic">
+                {{ entry.mediaOutlet }}</span>           
+              
+              {% set assets = entry.mediaLogo.all() %}
+                {% for asset in assets %}
+                  <img src="{{ asset.getUrl('logoThumb') }}" class="mt-4">
+                {% endfor %}
+            </a>
+          </div>
+        {% endfor %}
+      {% endif %}      
 
     </div>
-    
+    {% endfor %} 
+
+ 
 
 </section>
 

@@ -1,4 +1,16 @@
-dateModified: 1550887350
+categoryGroups:
+  5e0b5a1a-bc30-4a13-9607-705deb994112:
+    name: 'Media Categories'
+    handle: mediaCat
+    structure:
+      uid: 97743493-a4bc-4a81-a055-8d085b35bb88
+      maxLevels: null
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        hasUrls: true
+        uriFormat: 'media/{slug}'
+        template: ''
+dateModified: 1555966852
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -430,6 +442,67 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  802c9524-d7fa-415c-82e8-81dea02208a9:
+    name: 'Media Outlet'
+    handle: mediaOutlet
+    instructions: 'e.g. Sac&Co'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
+  b6d76844-7a81-44c5-bcea-9e75202d5017:
+    name: 'Media Category'
+    handle: mediaCategory
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      branchLimit: ''
+      sources: '*'
+      source: 'group:5e0b5a1a-bc30-4a13-9607-705deb994112'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
+  71c15150-5fff-4102-9fe9-676ffcd9a66d:
+    name: 'Media Video Still'
+    handle: mediaVideoStill
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      singleUploadLocationSubpath: ''
+      restrictFiles: ''
+      allowedKinds: null
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: list
+      limit: ''
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
 globalSets:
   7db3c8ae-7eab-4999-933f-031fe5ae09d4:
     fieldLayouts:
@@ -467,11 +540,11 @@ imageTransforms:
     width: '800'
   8c5d004e-1364-4297-bfae-6a4ee6143b80:
     format: null
-    handle: mediaThumb
+    handle: logoThumb
     height: '90'
     interlace: none
     mode: fit
-    name: 'Media Thumb'
+    name: 'Logo Thumb'
     position: center-center
     quality: '82'
     width: '180'
@@ -495,6 +568,16 @@ imageTransforms:
     position: center-center
     quality: null
     width: '600'
+  de33a293-691e-4868-b1f9-31f4a4f342ab:
+    format: null
+    handle: videoThumb
+    height: ''
+    interlace: none
+    mode: fit
+    name: 'Video thumb'
+    position: center-center
+    quality: null
+    width: '250'
 matrixBlockTypes:
   66d909df-fa6f-4039-87e5-6b8774697ee9:
     field: a38796c9-3fb0-4cf8-b37e-a98871bb2293
@@ -1108,25 +1191,34 @@ sections:
     enableVersioning: true
     entryTypes:
       94e3759d-14c7-4ea2-a9eb-c2e3516157d7:
+        name: Media
+        handle: media
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
         fieldLayouts:
           dd15457b-707f-4bcf-99f7-5d8217f8d7e7:
             tabs:
               -
-                fields:
-                  5100bf38-4d8d-4b19-bc18-5edb66b098ca:
-                    required: false
-                    sortOrder: 2
-                  5ec5c781-6da7-475d-98a5-855e86dafa48:
-                    required: false
-                    sortOrder: 1
                 name: Media
                 sortOrder: 1
-        handle: media
-        hasTitleField: true
-        name: Media
-        sortOrder: 1
-        titleFormat: ''
-        titleLabel: Title
+                fields:
+                  5100bf38-4d8d-4b19-bc18-5edb66b098ca:
+                    required: true
+                    sortOrder: 1
+                  b6d76844-7a81-44c5-bcea-9e75202d5017:
+                    required: true
+                    sortOrder: 2
+                  71c15150-5fff-4102-9fe9-676ffcd9a66d:
+                    required: false
+                    sortOrder: 3
+                  802c9524-d7fa-415c-82e8-81dea02208a9:
+                    required: false
+                    sortOrder: 4
+                  5ec5c781-6da7-475d-98a5-855e86dafa48:
+                    required: false
+                    sortOrder: 5
     handle: media
     name: Media
     propagateEntries: true
@@ -1196,7 +1288,7 @@ system:
   edition: pro
   live: true
   name: 'An Impossible Life'
-  schemaVersion: 3.1.25
+  schemaVersion: 3.1.27
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

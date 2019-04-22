@@ -42,7 +42,7 @@ return [
         // Prevent administrative changes from being made on staging
         'allowAdminChanges' => false,
         'devMode' => true,
-        'siteUrl' => 'http://000.000.000.000',
+        'siteUrl' => 'http://ail.circa42.com',
 
 
     ],
