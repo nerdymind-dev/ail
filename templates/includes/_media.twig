@@ -20,7 +20,7 @@
 {% set categories = craft.categories.group('mediaCat').relatedTo(
   { sourceElement: entryIds }).all() %}
     {% for category in categories %}
-      <h3  class="uppercase tracking-wide font-bold text-center text-grey-dark mt-4">
+      <h3  class="font-medium max-w-sm m-auto italic text-xl mt-8 text-center text-grey-dark mt-4 border-b border-grey-light">
         {{ category }}
       </h3>
 
@@ -39,7 +39,7 @@
 
               <span class="mb-2">{{ entry.title }} </span><br>
               <span class="text-base italic">
-                {{ entry.mediaOutlet }}</span>           
+                {{ entry.mediaOutlet }}</span>   <br>        
               
               {% set assets = entry.mediaLogo.all() %}
                 {% for asset in assets %}
