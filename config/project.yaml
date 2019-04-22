@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'media/{slug}'
         template: ''
-dateModified: 1555966852
+dateModified: 1555969112
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -164,30 +164,30 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   5ec5c781-6da7-475d-98a5-855e86dafa48:
-    contentColumnType: string
-    fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
+    name: 'Media Logo'
     handle: mediaLogo
     instructions: ''
-    name: 'Media Logo'
     searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
     settings:
-      allowedKinds: null
+      useSingleFolder: ''
       defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
       defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      restrictFiles: ''
-      selectionLabel: ''
       singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
       singleUploadLocationSubpath: ''
-      source: null
+      restrictFiles: ''
+      allowedKinds: null
       sources: '*'
+      source: null
       targetSiteId: null
-      useSingleFolder: ''
       viewMode: list
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
   634ad71d-37df-4ce2-8b21-528f030dfcd8:
     contentColumnType: string
     fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
@@ -498,7 +498,7 @@ fields:
       source: null
       targetSiteId: null
       viewMode: list
-      limit: ''
+      limit: '1'
       selectionLabel: ''
       localizeRelations: false
     contentColumnType: string
