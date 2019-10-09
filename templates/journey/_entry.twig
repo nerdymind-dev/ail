@@ -1,0 +1,161 @@
+{% extends '_base.twig' %}
+
+{% block body %}
+
+
+<div class="max-w-4xl m-auto p-8 my-12">
+	<div class="xs:mb-2 md:mb-4">
+		<h1 class="text-5xl py-4">{{ entry.title }}{% if entry.date %}:
+			Coming  {{ entry.date |date('long')}}
+		{% endif %}
+		</h1>
+
+		
+	</div>
+	<div class="flex flex-wrap">
+		
+		<div class="w-full lg:w-1/2 my-12 pr-12">
+			{% for block in entry.videoMatrix.all() %}
+				<div class="">	
+					<div class="flex flex-wrap">
+						<div class="mb-2">
+							<h2 class="text-4xl">
+								{{ block.videoTitle }}
+							</h2>
+						</div>
+
+						{% css %}
+							.videoWrapper {
+								position: relative;
+								padding-bottom: 56.25%; /* 16:9 */
+								padding-top: 25px;
+								height: 0;
+							}
+							.videoWrapper iframe {
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: teal;
+							}
+						{% endcss %}
+								
+						<div class="pt-2 h-0 w-full">
+						    <!-- Copy & Pasted from YouTube -->
+						    <iframe class=" pin-t pin-l w-full h-80" src="https://www.youtube.com/embed/{{ block.youTubeId|raw }}" allowfullscreen></iframe>
+						</div>
+
+						<div class="pt-4 text-2xl leading-loose mb-16">
+							{{ block.videoDescription }}</div>
+
+						</div>
+
+					</div> 
+				
+			{% endfor %}
+		</div>	
+	
+	
+		<div class="w-full lg:w-1/2 my-12">
+
+		<h2 class="text-4xl">
+			{{ journeyGlobals.globalDescription }}
+		</h2>
+		<h3 class="text-2xl my-8">
+			{{ journeyGlobals.globalCta }}
+		</h3>
+		
+
+			{% set title = entry.photoMatrix.all() %}
+			{% if title|length %}
+				<h2 class="text-4xl">
+					Photo gallery
+				</h2>
+			{% endif %}
+			<div class="flex-wrap flex mb-12">
+			  {% for block in entry.photoMatrix.all() %}
+			  	{% for photo in block.photo.all() %}
+					<div class="flex flex-col w-1/4">
+					  <div class="p-2">
+						    <a data-fancybox="gallery" data-caption="{{ block.caption }}" href="{{ photo.getUrl('galleryFull') }}">
+								<img src="{{ photo.getUrl('galleryThumbSmall') }}" alt="{{ block.caption }}" title=" {{ block.caption }}">
+							</a>
+
+					  </div>
+					  <div class="text-2xl text-center">
+					  	{{ block.caption }}
+					  </div>
+					 </div> 
+			    {% endfor %}
+			  {% endfor %}
+			</div>
+
+			{% set title = entry.mediaMatrix.all() %}
+			{% if title|length %}
+				<h2 class="text-4xl">
+					Media
+				</h2>
+			{% endif %}
+
+			<div class="flex flex-wrap">
+
+				{% for block in entry.mediaMatrix.all() %}
+					{% for logo in block.logo.all() %}
+						<div class="flex content-center flex-col w-1/4 p-2">
+								<div class="text-center my-auto h-24">
+									<a href="{{ block.mediaUrl }}" target="_blank">
+										<img src="{{ logo.getUrl('logoThumb') }}" alt="{{ block.mediaName }}" title="{{ block.mediaName}}">
+									</a>
+								</div>
+								<div class="text-center text-xl py-4">
+									<a href="{{ block.mediaUrl }}" target="_blank" class="no-underline text-red-darker hover:text-red-darkest">
+										{{ block.mediaName }}
+									</a>
+								</div>	
+
+						</div>
+
+					{% endfor %}
+				{% endfor %}
+			</div>	
+
+			<div>
+				
+			{% set title = entry.libraryList %}
+				{% if title|length %}
+					<h2 class="text-4xl mt-12">
+						Libraries 
+					</h2>
+				{% endif %}
+
+				{% for row in entry.libraryList %}
+
+					<li class="list-reset text-2xl">
+						<a href="{{ row.libraryUrl }}" class="no-underline text-red-darker hover:text-red-darkest">
+							{{ row.libraryName }}
+							</a> 
+							{% if row.acceptedBook == true %} 
+						{% elseif row.acceptedBook == false %}
+							(Processing)
+						{% endif %}
+					</li>
+				{% endfor %}
+				
+			</div>
+
+		</div> {# end 1/2 #}
+		
+		
+			
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+{% endblock %}
