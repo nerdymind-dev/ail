@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'media/{slug}'
         template: ''
-dateModified: 1570498154
+dateModified: 1570658283
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -1581,7 +1581,7 @@ sections:
   d9a5c6a0-c81e-4b04-a139-2459dd9f9365:
     name: Journey
     handle: journey
-    type: channel
+    type: structure
     enableVersioning: true
     propagationMethod: all
     siteSettings:
@@ -1590,6 +1590,9 @@ sections:
         hasUrls: true
         uriFormat: 'journey/{slug}'
         template: journey/_entry
+    structure:
+      uid: 2db832ac-e38c-4257-b502-580d849bbe06
+      maxLevels: null
     entryTypes:
       4765b108-149c-436f-bdb2-b9e22354c0a0:
         name: Journey

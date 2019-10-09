@@ -59,7 +59,7 @@
 	
 		<div class="w-full lg:w-1/2 my-12">
 
-		<h2 class="text-4xl">
+		<h2 class="text-center text-4xl">
 			{{ journeyGlobals.globalDescription }}
 		</h2>
 		<h3 class="text-2xl my-8">
@@ -69,21 +69,23 @@
 
 			{% set title = entry.photoMatrix.all() %}
 			{% if title|length %}
-				<h2 class="text-4xl">
-					Photo gallery
-				</h2>
+				<div class="mb-4 mt-8">
+					<h2 class="text-4xl mt-8">
+						Photo gallery
+					</h2>
+				</div>
 			{% endif %}
 			<div class="flex-wrap flex mb-12">
 			  {% for block in entry.photoMatrix.all() %}
 			  	{% for photo in block.photo.all() %}
-					<div class="flex flex-col w-1/4">
+					<div class="flex flex-col w-1/4  my-4">
 					  <div class="p-2">
 						    <a data-fancybox="gallery" data-caption="{{ block.caption }}" href="{{ photo.getUrl('galleryFull') }}">
 								<img src="{{ photo.getUrl('galleryThumbSmall') }}" alt="{{ block.caption }}" title=" {{ block.caption }}">
 							</a>
 
 					  </div>
-					  <div class="text-2xl text-center">
+					  <div class="text-xl text-center">
 					  	{{ block.caption }}
 					  </div>
 					 </div> 
@@ -93,9 +95,11 @@
 
 			{% set title = entry.mediaMatrix.all() %}
 			{% if title|length %}
-				<h2 class="text-4xl">
-					Media
-				</h2>
+				<div class="mb-4 mt-8">
+					<h2 class="text-4xl">
+						Media
+					</h2>
+				</div>	
 			{% endif %}
 
 			<div class="flex flex-wrap">
@@ -124,15 +128,17 @@
 				
 			{% set title = entry.libraryList %}
 				{% if title|length %}
-					<h2 class="text-4xl mt-12">
-						Libraries 
-					</h2>
+					<div class="mb-4 mt-8">
+						<h2 class="font-bold text-4xl my-2">
+							Libraries 
+						</h2>
+					</div>
 				{% endif %}
 
 				{% for row in entry.libraryList %}
 
 					<li class="list-reset text-2xl">
-						<a href="{{ row.libraryUrl }}" class="no-underline text-red-darker hover:text-red-darkest">
+						<a href="{{ row.libraryUrl }}" class="no-underline text-red-darker hover:text-red-darkest" target="_blank">
 							{{ row.libraryName }}
 							</a> 
 							{% if row.acceptedBook == true %} 
