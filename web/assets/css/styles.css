@@ -3117,6 +3117,14 @@ table {
   height: 16rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -6061,6 +6069,14 @@ table {
   width: 16rem;
 }
 
+.w-72 {
+  width: 18rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
 .w-auto {
   width: auto;
 }
@@ -8710,6 +8726,14 @@ table {
 
   .xs\:h-64 {
     height: 16rem;
+  }
+
+  .xs\:h-72 {
+    height: 18rem;
+  }
+
+  .xs\:h-80 {
+    height: 20rem;
   }
 
   .xs\:h-auto {
@@ -11640,6 +11664,14 @@ table {
     width: 16rem;
   }
 
+  .xs\:w-72 {
+    width: 18rem;
+  }
+
+  .xs\:w-80 {
+    width: 20rem;
+  }
+
   .xs\:w-auto {
     width: auto;
   }
@@ -14275,6 +14307,14 @@ table {
 
   .sm\:h-64 {
     height: 16rem;
+  }
+
+  .sm\:h-72 {
+    height: 18rem;
+  }
+
+  .sm\:h-80 {
+    height: 20rem;
   }
 
   .sm\:h-auto {
@@ -17205,6 +17245,14 @@ table {
     width: 16rem;
   }
 
+  .sm\:w-72 {
+    width: 18rem;
+  }
+
+  .sm\:w-80 {
+    width: 20rem;
+  }
+
   .sm\:w-auto {
     width: auto;
   }
@@ -19840,6 +19888,14 @@ table {
 
   .md\:h-64 {
     height: 16rem;
+  }
+
+  .md\:h-72 {
+    height: 18rem;
+  }
+
+  .md\:h-80 {
+    height: 20rem;
   }
 
   .md\:h-auto {
@@ -22770,6 +22826,14 @@ table {
     width: 16rem;
   }
 
+  .md\:w-72 {
+    width: 18rem;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -25405,6 +25469,14 @@ table {
 
   .lg\:h-64 {
     height: 16rem;
+  }
+
+  .lg\:h-72 {
+    height: 18rem;
+  }
+
+  .lg\:h-80 {
+    height: 20rem;
   }
 
   .lg\:h-auto {
@@ -28335,6 +28407,14 @@ table {
     width: 16rem;
   }
 
+  .lg\:w-72 {
+    width: 18rem;
+  }
+
+  .lg\:w-80 {
+    width: 20rem;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
@@ -30970,6 +31050,14 @@ table {
 
   .xl\:h-64 {
     height: 16rem;
+  }
+
+  .xl\:h-72 {
+    height: 18rem;
+  }
+
+  .xl\:h-80 {
+    height: 20rem;
   }
 
   .xl\:h-auto {
@@ -33898,6 +33986,14 @@ table {
 
   .xl\:w-64 {
     width: 16rem;
+  }
+
+  .xl\:w-72 {
+    width: 18rem;
+  }
+
+  .xl\:w-80 {
+    width: 20rem;
   }
 
   .xl\:w-auto {
