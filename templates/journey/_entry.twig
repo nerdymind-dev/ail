@@ -1,11 +1,12 @@
 {% extends '_base.twig' %}
 
+
 {% block body %}
 
 
-<div class="max-w-4xl m-auto p-8 my-12">
-	<div class="xs:mb-2 md:mb-4">
-		<h1 class="text-5xl py-4">{{ entry.title }}{% if entry.date %}:
+<div class="max-w-4xl m-auto p-6">
+	<div class="">
+		<h1 class="text-5xl text-center py-4">{{ entry.title }}{% if entry.date %}:
 			Coming  {{ entry.date |date('long')}}
 		{% endif %}
 		</h1>
