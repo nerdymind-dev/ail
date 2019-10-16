@@ -1,14 +1,17 @@
 {% for entry in entries %}
-		<div class="flex in-line">
-			<div class="w-1/2">
-				<a href="{{ entry.url }}" class="no-underline text-red-darker hover:text-red-darkest text-2xl">
+		<div class="flex justify-center in-line">
+			<div class="">
+				<a href="{{ entry.url }}" class="no-underline text-black hover:text-red-dark text-2xl">
 					{{ entry.title }}
-				</a> 
-			</div>
-			<div class="w-1/2">
 				{% if entry.date %} 
-					<span class="text-2xl"> {{ entry.date |date('short') }}</span>
-				{% endif %}
+					
+						— {{ entry.date |date('short') }} 
+					
+					{% endif %}
+				</a> 
+				
+
 			</div>
+			
 		</div>
 {% endfor %}

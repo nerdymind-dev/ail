@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'media/{slug}'
         template: ''
-dateModified: 1570658283
+dateModified: 1571261236
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -1102,7 +1102,7 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 1
               1a66198c-0524-4234-a193-a4c28a50f0eb:
-                required: true
+                required: false
                 sortOrder: 3
               62d2d473-c32b-45f4-bc96-80070d777b7b:
                 required: true
