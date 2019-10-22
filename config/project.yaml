@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'media/{slug}'
         template: ''
-dateModified: 1571261236
+dateModified: 1571271272
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -109,8 +109,8 @@ fields:
     fieldGroup: b634b1e1-16cf-4b5d-a699-b1eca70df78e
     contentColumnType: string
   2e573272-8aef-42e2-aa8e-b64e2261d695:
-    name: 'Global Description'
-    handle: globalDescription
+    name: 'State Tagline'
+    handle: stateTagline
     instructions: ''
     searchable: true
     translationMethod: none
@@ -154,6 +154,23 @@ fields:
       contentTable: '{{%matrixcontent_videomatrix}}'
       propagationMethod: all
     contentColumnType: string
+    fieldGroup: 3fc25d7b-b697-4aa7-be1e-6c37b5b21699
+  40cad17b-27da-41cb-a9e6-f0de2da06a0c:
+    name: 'Journey Call To Action'
+    handle: journeyCta
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: '1'
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
     fieldGroup: 3fc25d7b-b697-4aa7-be1e-6c37b5b21699
   5100bf38-4d8d-4b19-bc18-5edb66b098ca:
     name: 'Media URL'
@@ -251,6 +268,23 @@ fields:
       localizeRelations: false
     fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
     contentColumnType: string
+  5faa6299-e85c-4ddc-adce-2158772a21c3:
+    name: 'Journey Tagline'
+    handle: journeyTagline
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 3fc25d7b-b697-4aa7-be1e-6c37b5b21699
   634ad71d-37df-4ce2-8b21-528f030dfcd8:
     name: 'Cover Matrix'
     handle: coverMatrix
@@ -601,8 +635,8 @@ fields:
     fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
     contentColumnType: text
   f26f94de-eeec-4470-a3ba-2d27e77191a1:
-    name: 'Journey Call To Action'
-    handle: globalCta
+    name: 'State Call To Action'
+    handle: stateCta
     instructions: ''
     searchable: true
     translationMethod: none
@@ -650,8 +684,18 @@ globalSets:
       c901e862-057a-489b-9de8-b06de486cd72:
         tabs:
           -
-            name: 'Tab 1'
+            name: 'Map Page'
             sortOrder: 1
+            fields:
+              40cad17b-27da-41cb-a9e6-f0de2da06a0c:
+                required: false
+                sortOrder: 2
+              5faa6299-e85c-4ddc-adce-2158772a21c3:
+                required: false
+                sortOrder: 1
+          -
+            name: 'State Pages'
+            sortOrder: 2
             fields:
               2e573272-8aef-42e2-aa8e-b64e2261d695:
                 required: false
