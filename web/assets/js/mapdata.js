@@ -70,52 +70,52 @@ var simplemaps_usmap_mapdata={
   state_specific: {
     HI: {
       name: "Hawaii",
-      url: "/journey/hawaii"
+      //url: "/journey/hawaii"
     },
     AK: {
       name: "Alaska",
-      url: "/journey/alaska"
+      //url: "/journey/alaska"
     },
     FL: {
       name: "Florida",
-      url: "/journey/florida"
+      //url: "/journey/florida"
     },
     NH: {
       name: "New Hampshire",
-      url: "/journey/new-hampshire"
+      //url: "/journey/new-hampshire"
     },
     VT: {
       name: "Vermont",
-      url: "/journey/vermont"
+      ////url: "/journey/vermont"
     },
     ME: {
       name: "Maine",
-      url: "/journey/maine"
+      //url: "/journey/maine"
     },
     RI: {
       name: "Rhode Island",
-      url: "/journey/rhode-island"
+      //url: "/journey/rhode-island"
     },
     NY: {
       name: "New York",
-      url: "/journey/new-york"
+      //url: "/journey/new-york"
     },
     PA: {
       name: "Pennsylvania",
       color: "#f2d023",
-      url: "/journey/pennsylvania"
+      //url: "/journey/pennsylvania"
     },
     NJ: {
       name: "New Jersey",
-      url: "/journey/new-jersey"
+      //url: "/journey/new-jersey"
     },
     DE: {
       name: "Delaware",
-      url: "/journey/delaware"
+      //url: "/journey/delaware"
     },
     MD: {
       name: "Maryland",
-      url: "/journey/maryland"
+      //url: "/journey/maryland"
     },
     VA: {
       name: "Virginia",
@@ -144,7 +144,7 @@ var simplemaps_usmap_mapdata={
     },
     CT: {
       name: "Connecticut",
-      url: "/journey/connecticut"
+      //url: "/journey/connecticut"
     },
     WI: {
       name: "Wisconsin",
@@ -153,35 +153,35 @@ var simplemaps_usmap_mapdata={
     },
     NC: {
       name: "North Carolina",
-      url: "/journey/north-carolina"
+      //url: "/journey/north-carolina"
     },
     DC: {
       name: "District of Columbia",
-      url: "/journey/district-of-columbia"
+      //url: "/journey/district-of-columbia"
     },
     MA: {
       name: "Massachusetts",
-      url: "/journey/massachusetts"
+      //url: "/journey/massachusetts"
     },
     TN: {
       name: "Tennessee",
-      url: "/journey/tennessee"
+      //url: "/journey/tennessee"
     },
     AR: {
       name: "Arkansas",
-      url: "/journey/arkansas"
+      //url: "/journey/arkansas"
     },
     MO: {
       name: "Missouri",
-      url: "/journey/missouri"
+      //url: "/journey/missouri"
     },
     GA: {
       name: "Georgia",
-      url: "/journey/georgia"
+      //url: "/journey/georgia"
     },
     SC: {
       name: "South Carolina",
-      url: "/journey/south-carolina"
+      //url: "/journey/south-carolina"
     },
     KY: {
       name: "Kentucky",
@@ -190,15 +190,15 @@ var simplemaps_usmap_mapdata={
     },
     AL: {
       name: "Alabama",
-      url: "/journey/alabama"
+      //url: "/journey/alabama"
     },
     LA: {
       name: "Louisiana",
-      url: "/journey/louisiana"
+      //url: "/journey/louisiana"
     },
     MS: {
       name: "Mississippi",
-      url: "/journey/mississippi"
+      //url: "/journey/mississippi"
     },
     IA: {
       name: "Iowa",
@@ -212,19 +212,19 @@ var simplemaps_usmap_mapdata={
     },
     OK: {
       name: "Oklahoma",
-      url: "/journey/oklahoma"
+      //url: "/journey/oklahoma"
     },
     TX: {
       name: "Texas",
-      url: "/journey/texas"
+      //url: "/journey/texas"
     },
     NM: {
       name: "New Mexico",
-      url: "/journey/new-mexico"
+      //url: "/journey/new-mexico"
     },
     KS: {
       name: "Kansas",
-      url: "/journey/kansas"
+      //url: "/journey/kansas"
     },
     NE: {
       name: "Nebraska",
@@ -233,39 +233,37 @@ var simplemaps_usmap_mapdata={
     },
     SD: {
       name: "South Dakota",
-      url: "/journey/south-dakota"
+      //url: "/journey/south-dakota"
     },
     ND: {
       name: "North Dakota",
-      url: "/journey/north-dakota"
+      //url: "/journey/north-dakota"
     },
     WY: {
       name: "Wyoming",
-      url: "/journey/wyoming"
+      //url: "/journey/wyoming"
     },
     MT: {
       name: "Montana",
-      url: "/journey/montana"
+      //url: "/journey/montana"
     },
     CO: {
       name: "Colorado",
-      url: "/journey/colorado"
     },
     UT: {
       name: "Utah",
-      url: "/journey/utah"
     },
     AZ: {
       name: "Arizona",
-      url: "/journey/arizona"
+      //url: "/journey/arizona"
     },
     NV: {
       name: "Nevada",
-      url: "/journey/nevada"
+      //url: "/journey/nevada"
     },
     OR: {
       name: "Oregon",
-      url: "/journey/oregon"
+      //url: "/journey/oregon"
     },
     WA: {
       name: "Washington",
@@ -274,7 +272,7 @@ var simplemaps_usmap_mapdata={
     },
     CA: {
       name: "California",
-      url: "/journey/california"
+      //url: "/journey/california"
     },
     MI: {
       name: "Michigan",
@@ -283,32 +281,32 @@ var simplemaps_usmap_mapdata={
     },
     ID: {
       name: "Idaho",
-      url: "/journey/idaho"
+      //url: "/journey/idaho"
     },
     GU: {
       hide: "yes",
       name: "Guam",
-      url: "/journey/guam"
+      //url: "/journey/guam"
     },
     VI: {
       hide: "yes",
       name: "Virgin Islands",
-      url: "/journey/virgin-islands"
+      //url: "/journey/virgin-islands"
     },
     PR: {
       hide: "yes",
       name: "Puerto Rico",
-      url: "/journey/puerto-rico"
+      //url: "/journey/puerto-rico"
     },
     MP: {
       hide: "yes",
       name: "Northern Mariana Islands",
-      url: "/journey/northern-mariana-islands"
+      //url: "/journey/northern-mariana-islands"
     },
     AS: {
       name: "American Samoa",
       hide: "yes",
-      url: "/journey/american-samoa"
+      //url: "/journey/american-samoa"
     }
   },
   locations: {},
