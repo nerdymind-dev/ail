@@ -5,6 +5,20 @@
 <div class="max-w-xl m-auto p-8 my-12">
 <h1 class="text-5xl py-4">{{ entry.title }}</h1>
 
+<div class="my-4">
+<span class="text-grey">Filed under:</span>
+	{% set catQ = entry.category %}
+	{% for category in catQ.all() %}
+		
+
+		<div class="inline mr-2">
+			<a href="{{ category.url }}" class="text-grey font-semibold hover:text-red-darker text-base pl-4 no-underline">
+				# {{ category.title }}
+			</a>
+		</div>
+
+	{% endfor %}
+</div>
 	{% for block in entry.blogContent.all() %}
 		{% if block.type == "textBlock" %}
 			<h2 class="text-3xl text-grey-dark italic">{{ block.subHead }}</h2>
