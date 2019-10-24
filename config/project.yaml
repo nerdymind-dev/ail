@@ -10,7 +10,18 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'media/{slug}'
         template: ''
-dateModified: 1571271272
+  9c7fb097-d8b2-4ea9-bfec-1e9146a4b605:
+    name: 'Blog Categories'
+    handle: blogCategories
+    structure:
+      uid: ccbfbec8-8983-4667-9982-94bc21f90289
+      maxLevels: null
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        hasUrls: true
+        uriFormat: 'categories/{slug}'
+        template: blog/_categories
+dateModified: 1571933164
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -486,6 +497,28 @@ fields:
       placeholder: ''
     fieldGroup: 4daca8ac-ce16-48aa-9e24-9dacdbcb1843
     contentColumnType: text
+  aa029a80-06d6-4455-977a-8501f8ed7b91:
+    name: Category
+    handle: category
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: ''
+      sources: '*'
+      source: 'group:9c7fb097-d8b2-4ea9-bfec-1e9146a4b605'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
   aaae8cf4-f93e-4153-80a4-86c935457baf:
     name: Headline
     handle: headline
@@ -1508,9 +1541,12 @@ sections:
                 name: Blog
                 sortOrder: 1
                 fields:
+                  aa029a80-06d6-4455-977a-8501f8ed7b91:
+                    required: false
+                    sortOrder: 2
                   b814263d-8af7-4f61-aed2-355857bb9bcd:
                     required: true
-                    sortOrder: 2
+                    sortOrder: 3
                   e964ef45-a1ca-485e-a56b-5f5a309ab3c0:
                     required: true
                     sortOrder: 1
