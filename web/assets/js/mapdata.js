@@ -103,7 +103,7 @@ var simplemaps_usmap_mapdata={
     PA: {
       name: "Pennsylvania",
       color: "#f2d023",
-      //url: "/journey/pennsylvania"
+      url: "/journey/pennsylvania"
     },
     NJ: {
       name: "New Jersey",
