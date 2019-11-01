@@ -5,4 +5,5 @@
 /ail.sublime-project
 /ail.sublime-workspace
 /node_modules
-/web/assets/img
+/web/assets/img/*
+*.JPG
