@@ -82,19 +82,23 @@ var simplemaps_usmap_mapdata={
     },
     NH: {
       name: "New Hampshire",
-      //url: "/journey/new-hampshire"
+      color: "#f2d023",
+      url: "/journey/new-hampshire"
     },
     VT: {
       name: "Vermont",
-      ////url: "/journey/vermont"
+      color: "#f2d023",
+      url: "/journey/vermont"
     },
     ME: {
       name: "Maine",
-      //url: "/journey/maine"
+      color: "#f2d023",
+      url: "/journey/maine"
     },
     RI: {
       name: "Rhode Island",
-      //url: "/journey/rhode-island"
+      color: "#f2d023",
+      url: "/journey/rhode-island"
     },
     NY: {
       name: "New York",
@@ -107,15 +111,18 @@ var simplemaps_usmap_mapdata={
     },
     NJ: {
       name: "New Jersey",
-      //url: "/journey/new-jersey"
+      color: "#f2d023",
+      url: "/journey/new-jersey"
     },
     DE: {
       name: "Delaware",
-      //url: "/journey/delaware"
+      color: "#f2d023",
+      url: "/journey/delaware"
     },
     MD: {
       name: "Maryland",
-      //url: "/journey/maryland"
+      color: "#f2d023",
+      url: "/journey/maryland"
     },
     VA: {
       name: "Virginia",
@@ -144,7 +151,8 @@ var simplemaps_usmap_mapdata={
     },
     CT: {
       name: "Connecticut",
-      //url: "/journey/connecticut"
+      color: "#f2d023",
+      url: "/journey/connecticut"
     },
     WI: {
       name: "Wisconsin",
@@ -161,7 +169,8 @@ var simplemaps_usmap_mapdata={
     },
     MA: {
       name: "Massachusetts",
-      //url: "/journey/massachusetts"
+      color: "#f2d023",
+      url: "/journey/massachusetts"
     },
     TN: {
       name: "Tennessee",
