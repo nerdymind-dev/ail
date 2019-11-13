@@ -165,7 +165,8 @@ var simplemaps_usmap_mapdata={
     },
     DC: {
       name: "District of Columbia",
-      //url: "/journey/district-of-columbia"
+      color: "#f2d023",
+      url: "/journey/district-of-columbia"
     },
     MA: {
       name: "Massachusetts",
