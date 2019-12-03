@@ -1,24 +1,24 @@
-{% if craft.entries.section('blog').ids() %}
+{% if craft.entries.section('resources').ids() %}
 
 
-{# Blog list #}
+{# Resources list #}
 <section class="bg-white py-4 font-serif xs:my-16 lg:my-32">
   <div class="text-center container m-auto"> 
     <label for="tagline" class="uppercase tracking-wide font-bold text-center text-grey-dark"> 
     	From the 
     </label>
     <h2 class="mt-2 mb-4 font-medium max-w-sm m-auto italic">
-      Blog
+      Resources
     </h2>
     <hr class="border-b w-8 m-auto my-6">
   </div>
 
-{#   start blog listing #}
+{#   start Resources listing #}
   
   <div class="container container max-w-xl m-auto flex flex-wrap flex-col md:flex-row items-center justify-start">
 	    <div class="flex flex-wrap">
 
-		{% set entries = craft.entries.section('blog').limit(4).all() %}
+		{% set entries = craft.entries.section('resources').limit(4).all() %}
 
 			{% for entry in entries %}
 				<div class="w-full lg:w-1/2 p-3">

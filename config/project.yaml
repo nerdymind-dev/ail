@@ -11,8 +11,8 @@ categoryGroups:
         uriFormat: 'media/{slug}'
         template: ''
   9c7fb097-d8b2-4ea9-bfec-1e9146a4b605:
-    name: 'Blog Categories'
-    handle: blogCategories
+    name: 'Resources Categories'
+    handle: resourcesCategories
     structure:
       uid: ccbfbec8-8983-4667-9982-94bc21f90289
       maxLevels: null
@@ -20,8 +20,8 @@ categoryGroups:
       294d42da-43a8-438d-8070-ed01a0d18aa1:
         hasUrls: true
         uriFormat: 'categories/{slug}'
-        template: blog/_categories
-dateModified: 1571933164
+        template: resources/_categories
+dateModified: 1575412558
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
@@ -44,7 +44,7 @@ fieldGroups:
   b634b1e1-16cf-4b5d-a699-b1eca70df78e:
     name: Books
   f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5:
-    name: Blog
+    name: Resources
 fields:
   02ae1e22-9846-40c0-be62-2fbd5aae5f51:
     name: 'Alt Tag'
@@ -556,20 +556,20 @@ fields:
     fieldGroup: 5dbe8da5-2e21-44c3-a509-627bfe1e0975
     contentColumnType: string
   b814263d-8af7-4f61-aed2-355857bb9bcd:
-    name: 'Blog Content'
-    handle: blogContent
+    name: 'Resources Content'
+    handle: resourcesContent
     instructions: ''
     searchable: true
     translationMethod: site
     translationKeyFormat: null
     type: craft\fields\Matrix
     settings:
-      contentTable: '{{%matrixcontent_blogcontent}}'
-      localizeBlocks: false
-      maxBlocks: ''
       minBlocks: ''
-    fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_resourcescontent}}'
+      propagationMethod: all
     contentColumnType: string
+    fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
   c76cde9f-3a1b-4179-a992-d79f80f108e0:
     name: 'CTA Button'
     handle: ctaButton
@@ -788,15 +788,15 @@ imageTransforms:
     quality: null
     interlace: none
   b7fa6335-d517-4555-9ab8-117e87f033b2:
-    name: 'Blog crop'
-    handle: blogCrop
-    mode: crop
-    position: center-center
-    width: 600
-    height: null
     format: null
-    quality: null
+    handle: resourcesCrop
+    height: null
     interlace: none
+    mode: crop
+    name: 'Resources crop'
+    position: center-center
+    quality: null
+    width: 600
   de33a293-691e-4868-b1f9-31f4a4f342ab:
     name: 'Video thumb'
     handle: videoThumb
@@ -1056,23 +1056,10 @@ matrixBlockTypes:
         fieldGroup: null
         contentColumnType: text
   9970b50f-8e1f-456e-acac-48ef400cdf17:
+    field: b814263d-8af7-4f61-aed2-355857bb9bcd
     name: 'Text Block'
     handle: textBlock
     sortOrder: 1
-    field: b814263d-8af7-4f61-aed2-355857bb9bcd
-    fieldLayouts:
-      4d667502-70fb-4272-88f5-c28ff92e8835:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
-            fields:
-              4823590b-e4a7-49cb-8bed-0a42d7dd10b5:
-                required: false
-                sortOrder: 1
-              5d18de3a-8113-4126-b879-31ec1b7aaf12:
-                required: true
-                sortOrder: 2
     fields:
       4823590b-e4a7-49cb-8bed-0a42d7dd10b5:
         name: Subhead
@@ -1089,8 +1076,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       5d18de3a-8113-4126-b879-31ec1b7aaf12:
         name: Text
         handle: text
@@ -1100,17 +1087,31 @@ matrixBlockTypes:
         translationKeyFormat: null
         type: craft\redactor\Field
         settings:
-          availableTransforms: '*'
-          availableVolumes: '*'
-          columnType: text
-          purifierConfig: ''
-          purifyHtml: '1'
           redactorConfig: ''
+          purifierConfig: ''
+          cleanupHtml: true
           removeInlineStyles: '1'
           removeEmptyTags: '1'
           removeNbsp: '1'
-        fieldGroup: null
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: '*'
+          availableTransforms: '*'
         contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      4d667502-70fb-4272-88f5-c28ff92e8835:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              4823590b-e4a7-49cb-8bed-0a42d7dd10b5:
+                required: false
+                sortOrder: 1
+              5d18de3a-8113-4126-b879-31ec1b7aaf12:
+                required: true
+                sortOrder: 2
   b623ae7e-7df0-41a3-bc68-580363b28fe3:
     field: 359187fa-c63a-4d18-b90e-20bac3663053
     name: 'Video Block'
@@ -1185,23 +1186,10 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 2
   baeca08f-0b93-473a-9c74-918b916e4bba:
+    field: b814263d-8af7-4f61-aed2-355857bb9bcd
     name: 'Image Block'
     handle: imageBlock
     sortOrder: 2
-    field: b814263d-8af7-4f61-aed2-355857bb9bcd
-    fieldLayouts:
-      d73d3c0b-49f8-4c0c-91bc-78b5a7f25668:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
-            fields:
-              207e5185-4e7e-4e65-ab63-354e684ccf75:
-                required: true
-                sortOrder: 1
-              b6a1a9e3-4d2e-4d34-8e92-cd5f12889ca4:
-                required: true
-                sortOrder: 2
     fields:
       207e5185-4e7e-4e65-ab63-354e684ccf75:
         name: Image
@@ -1226,8 +1214,9 @@ matrixBlockTypes:
           limit: '1'
           selectionLabel: ''
           localizeRelations: false
-        fieldGroup: null
+          validateRelatedElements: ''
         contentColumnType: string
+        fieldGroup: null
       b6a1a9e3-4d2e-4d34-8e92-cd5f12889ca4:
         name: Caption
         handle: caption
@@ -1243,8 +1232,21 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      d73d3c0b-49f8-4c0c-91bc-78b5a7f25668:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              207e5185-4e7e-4e65-ab63-354e684ccf75:
+                required: true
+                sortOrder: 1
+              b6a1a9e3-4d2e-4d34-8e92-cd5f12889ca4:
+                required: true
+                sortOrder: 2
   c3727562-7da1-4abc-9047-66d71de1c716:
     name: 'Cover Block'
     handle: coverBlock
@@ -1327,29 +1329,10 @@ matrixBlockTypes:
         fieldGroup: null
         contentColumnType: text
   e761f881-ef3b-4f5e-afa1-db2872314059:
+    field: b814263d-8af7-4f61-aed2-355857bb9bcd
     name: 'Link Block'
     handle: linkBlock
     sortOrder: 3
-    field: b814263d-8af7-4f61-aed2-355857bb9bcd
-    fieldLayouts:
-      80c3d625-fea7-4642-b221-1832b30300d8:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
-            fields:
-              0229deb1-4d17-4c72-894a-19636fb6a1b1:
-                required: true
-                sortOrder: 3
-              4db900f8-675f-43b8-b428-323de4ae156c:
-                required: true
-                sortOrder: 4
-              67f9f3e1-6928-44b5-8352-44166653a700:
-                required: true
-                sortOrder: 1
-              d84e8500-8e31-435e-b92a-98d173ccf443:
-                required: true
-                sortOrder: 2
     fields:
       0229deb1-4d17-4c72-894a-19636fb6a1b1:
         name: 'URL Link'
@@ -1366,8 +1349,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       4db900f8-675f-43b8-b428-323de4ae156c:
         name: 'Link Description'
         handle: linkDescription
@@ -1383,8 +1366,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: '380'
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       67f9f3e1-6928-44b5-8352-44166653a700:
         name: 'Article title'
         handle: titleLink
@@ -1400,8 +1383,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       d84e8500-8e31-435e-b92a-98d173ccf443:
         name: 'Logo Link'
         handle: logoLink
@@ -1425,8 +1408,28 @@ matrixBlockTypes:
           limit: '1'
           selectionLabel: ''
           localizeRelations: false
-        fieldGroup: null
+          validateRelatedElements: ''
         contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      80c3d625-fea7-4642-b221-1832b30300d8:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              0229deb1-4d17-4c72-894a-19636fb6a1b1:
+                required: true
+                sortOrder: 3
+              4db900f8-675f-43b8-b428-323de4ae156c:
+                required: true
+                sortOrder: 4
+              67f9f3e1-6928-44b5-8352-44166653a700:
+                required: true
+                sortOrder: 1
+              d84e8500-8e31-435e-b92a-98d173ccf443:
+                required: true
+                sortOrder: 2
 plugins:
   redactor:
     edition: standard
@@ -1522,10 +1525,17 @@ sections:
         template: _entry
     propagationMethod: all
   35fcf569-777b-4163-9129-4078455ac448:
-    name: Blog
-    handle: blog
+    name: Resources
+    handle: resources
     type: channel
     enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      294d42da-43a8-438d-8070-ed01a0d18aa1:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'resources/{slug}'
+        template: resources/_entry
     entryTypes:
       9e374f71-27bc-4e93-8adb-ea15a8c792c2:
         name: Blog
@@ -1550,13 +1560,6 @@ sections:
                   e964ef45-a1ca-485e-a56b-5f5a309ab3c0:
                     required: true
                     sortOrder: 1
-    siteSettings:
-      294d42da-43a8-438d-8070-ed01a0d18aa1:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: 'blog/{slug}'
-        template: blog/_entry
-    propagationMethod: all
   3fb35ac8-60b4-43d3-b32b-eddaf36686ae:
     name: 'Journey Index'
     handle: journeyIndex

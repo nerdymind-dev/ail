@@ -1,0 +1,45 @@
+{% extends '_base.twig' %}
+
+{% block body %}
+
+{# Resources list #}
+<section class="bg-white py-4 font-serif xs:my-16 lg:my-32">
+  <div class="text-center container m-auto"> 
+    <label for="tagline" class="uppercase tracking-wide font-bold text-center text-grey-dark"> 
+    	From the 
+    </label>
+    <h2 class="mt-2 mb-4 font-medium max-w-sm m-auto italic">
+      Resources
+    </h2>
+    <hr class="border-b w-8 m-auto my-6">
+  </div>
+
+{# cat listing #}
+<div class="container flex justify-center mx-auto my-6">
+{% set catQ = craft.categories.group('resourcesCategories') %}
+	{% for category in catQ.all() %}
+		
+		<div class="inline mr-2">
+			<a href="{{ category.url }}" class="text-red-darker font-semibold hover:text-gray-darker text-base px-4 border-red-darker rounded border hover:shadow no-underline">
+				# {{ category.title }}
+			</a>
+		</div>
+
+	{% endfor %}
+</div>
+{#   start resources listing #}
+  
+  <div class="container container max-w-xl m-auto flex flex-wrap flex-col md:flex-row items-center justify-start">
+	    <div class="flex flex-wrap">
+
+		{% set query = craft.entries()
+		    .section('resources')
+		    .limit(8) %}
+
+			{% include "resources/_entryloop" %}
+
+		</div>
+	</div>
+</section>
+
+{% endblock %}
