@@ -76,10 +76,10 @@
 						</h2>
 					</div>
 				{% endif %}
-				<div class="flex-wrap flex mb-12">
+				<div class="flex-wrap flex mb-4">
 				  {% for block in entry.photoMatrix.all() %}
 
-						 <div class="flex bg-gray-200">
+						 <div class="flex">
 						 	{% for photo in block.photo.all() %}
 						  
 						  <div class="w-32 text-lg text-center mr-4 mb-4">
@@ -107,17 +107,17 @@
 
 					{% for block in entry.mediaMatrix.all() %}
 						{% for logo in block.logo.all() %}
-							<div class="flex content-center flex-col w-1/4 p-2">
-									<div class="text-center my-auto h-24">
-										<a href="{{ block.mediaUrl }}" target="_blank">
-											<img src="{{ logo.getUrl('logoThumb') }}" alt="{{ block.mediaName }}" title="{{ block.mediaName}}">
-										</a>
-									</div>
-									<div class="text-center text-xl py-4">
-										<a href="{{ block.mediaUrl }}" target="_blank" class="no-underline text-red-darker hover:text-red-darkest">
-											{{ block.mediaName }}
-										</a>
-									</div>	
+							<div class="flex flex-col w-1/4">
+								<div class="my-auto w-32">
+									<a href="{{ block.mediaUrl }}" target="_blank">
+										<img src="{{ logo.getUrl('galleryThumbSmall') }}" alt="{{ block.mediaName }}" title="{{ block.mediaName}}">
+									</a>
+								</div>
+								<div class="text-center text-xl pb-4">
+									<a href="{{ block.mediaUrl }}" target="_blank" class="no-underline text-red-darker hover:text-red-darkest">
+										{{ block.mediaName }}
+									</a>
+								</div>	
 
 							</div>
 
@@ -125,11 +125,11 @@
 					{% endfor %}
 				</div>	
 
-				<div>
+				<div class="my-8">
 					
 				{% set title = entry.libraryList %}
 					{% if title|length %}
-						<div class="mb-4 mt-8">
+						<div class="">
 							<h2 class="font-bold text-4xl my-2">
 								Libraries 
 							</h2>
