@@ -183,7 +183,8 @@ var simplemaps_usmap_mapdata={
     },
     MO: {
       name: "Missouri",
-      //url: "/journey/missouri"
+      color: "#f2d023",      
+      url: "/journey/missouri"
     },
     GA: {
       name: "Georgia",
@@ -234,7 +235,8 @@ var simplemaps_usmap_mapdata={
     },
     KS: {
       name: "Kansas",
-      //url: "/journey/kansas"
+      color: "#f2d023",
+      url: "/journey/kansas"
     },
     NE: {
       name: "Nebraska",
