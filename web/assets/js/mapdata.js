@@ -284,7 +284,8 @@ var simplemaps_usmap_mapdata={
     },
     CA: {
       name: "California",
-      //url: "/journey/california"
+      color: "#f2d023",
+      url: "/journey/california"
     },
     MI: {
       name: "Michigan",
