@@ -70,7 +70,8 @@ var simplemaps_usmap_mapdata={
   state_specific: {
     HI: {
       name: "Hawaii",
-      //url: "/journey/hawaii"
+      color: "#f2d023",
+      url: "/journey/hawaii"
     },
     AK: {
       name: "Alaska",
@@ -78,7 +79,8 @@ var simplemaps_usmap_mapdata={
     },
     FL: {
       name: "Florida",
-      //url: "/journey/florida"
+      color: "#f2d023",
+      url: "/journey/florida"
     },
     NH: {
       name: "New Hampshire",
@@ -161,7 +163,8 @@ var simplemaps_usmap_mapdata={
     },
     NC: {
       name: "North Carolina",
-      //url: "/journey/north-carolina"
+      color: "#f2d023",
+      url: "/journey/north-carolina"
     },
     DC: {
       name: "District of Columbia",
@@ -175,11 +178,13 @@ var simplemaps_usmap_mapdata={
     },
     TN: {
       name: "Tennessee",
-      //url: "/journey/tennessee"
+      color: "#f2d023",
+      url: "/journey/tennessee"
     },
     AR: {
       name: "Arkansas",
-      //url: "/journey/arkansas"
+      color: "#f2d023",
+      url: "/journey/arkansas"
     },
     MO: {
       name: "Missouri",
@@ -188,11 +193,13 @@ var simplemaps_usmap_mapdata={
     },
     GA: {
       name: "Georgia",
-      //url: "/journey/georgia"
+      color: "#f2d023",
+      url: "/journey/georgia"
     },
     SC: {
       name: "South Carolina",
-      //url: "/journey/south-carolina"
+      color: "#f2d023",
+      url: "/journey/south-carolina"
     },
     KY: {
       name: "Kentucky",
@@ -201,15 +208,18 @@ var simplemaps_usmap_mapdata={
     },
     AL: {
       name: "Alabama",
-      //url: "/journey/alabama"
+      color: "#f2d023",
+      url: "/journey/alabama"
     },
     LA: {
       name: "Louisiana",
-      //url: "/journey/louisiana"
+      color: "#f2d023",
+      url: "/journey/louisiana"
     },
     MS: {
       name: "Mississippi",
-      //url: "/journey/mississippi"
+      color: "#f2d023",
+      url: "/journey/mississippi"
     },
     IA: {
       name: "Iowa",
@@ -227,11 +237,13 @@ var simplemaps_usmap_mapdata={
     },
     TX: {
       name: "Texas",
-      //url: "/journey/texas"
+      color: "#f2d023",
+      url: "/journey/texas"
     },
     NM: {
       name: "New Mexico",
-      //url: "/journey/new-mexico"
+      color: "#f2d023",
+      url: "/journey/new-mexico"
     },
     KS: {
       name: "Kansas",
@@ -264,18 +276,23 @@ var simplemaps_usmap_mapdata={
     },
     UT: {
       name: "Utah",
+      color: "#f2d023",
+      url: "/journey/utah"
     },
     AZ: {
       name: "Arizona",
-      //url: "/journey/arizona"
+      color: "#f2d023",
+      url: "/journey/arizona"
     },
     NV: {
       name: "Nevada",
-      //url: "/journey/nevada"
+      color: "#f2d023",
+      url: "/journey/nevada"
     },
     OR: {
       name: "Oregon",
-      //url: "/journey/oregon"
+      color: "#f2d023",
+      url: "/journey/oregon"
     },
     WA: {
       name: "Washington",
@@ -294,7 +311,8 @@ var simplemaps_usmap_mapdata={
     },
     ID: {
       name: "Idaho",
-      //url: "/journey/idaho"
+      color: "#f2d023",
+      url: "/journey/idaho"
     },
     GU: {
       hide: "yes",
