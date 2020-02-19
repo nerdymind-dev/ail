@@ -86,6 +86,7 @@
 							<a data-fancybox="gallery" data-caption="{{ block.caption }}" href="{{ photo.getUrl('galleryFull') }}" class="no-underline hover:text-red text-black">
 						   	<img src="{{ photo.getUrl('galleryThumbSmall') }}" alt="{{ block.caption }}" title=" {{ block.caption }}">
 								<br> {{ block.caption }}
+							</a>
 						  </div>
 						  
 						  {% endfor %}
@@ -144,7 +145,7 @@
 								</a> 
 								{% if row.acceptedBook == true %} 
 							{% elseif row.acceptedBook == false %}
-								(Processing)
+								(Donated)
 							{% endif %}
 						</li>
 					{% endfor %}
