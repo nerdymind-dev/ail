@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a288923238219bba2fdf5f883c9057a3",
+    "content-hash": "913f394782e2a6ee2a36170361bf30c4",
     "packages": [
         {
             "name": "cakephp/core",
@@ -516,16 +516,16 @@
         },
         {
             "name": "craftcms/feed-me",
-            "version": "4.1.2",
+            "version": "4.2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/feed-me.git",
-                "reference": "38a4a02ab4ca0cfd21736a7156cb8a54c7d3001e"
+                "reference": "3bef830fca9a39ada61fe42119a5c8878f751c52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/38a4a02ab4ca0cfd21736a7156cb8a54c7d3001e",
-                "reference": "38a4a02ab4ca0cfd21736a7156cb8a54c7d3001e",
+                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/3bef830fca9a39ada61fe42119a5c8878f751c52",
+                "reference": "3bef830fca9a39ada61fe42119a5c8878f751c52",
                 "shasum": ""
             },
             "require": {
@@ -576,7 +576,7 @@
                 "docs": "https://docs.craftcms.com/feed-me/v4/",
                 "rss": "https://github.com/craftcms/feed-me/commits/master.atom"
             },
-            "time": "2019-08-11T16:41:38+00:00"
+            "time": "2020-01-15T18:53:36+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
