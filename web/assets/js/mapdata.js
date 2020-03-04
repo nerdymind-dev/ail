@@ -104,7 +104,8 @@ var simplemaps_usmap_mapdata={
     },
     NY: {
       name: "New York",
-      //url: "/journey/new-york"
+      color: "#f2d023",
+      url: "/journey/new-york"
     },
     PA: {
       name: "Pennsylvania",
