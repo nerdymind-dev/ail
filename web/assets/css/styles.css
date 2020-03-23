@@ -2942,11 +2942,11 @@ table {
 }
 
 .font-sans {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
-  font-family: garamond-premier-pro-display, Liberation Serif, Georgia, serif;
+  font-family: EB Garamond, serif;
 }
 
 .font-mono {
@@ -8553,11 +8553,11 @@ table {
   }
 
   .xs\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
   }
 
   .xs\:font-serif {
-    font-family: garamond-premier-pro-display, Liberation Serif, Georgia, serif;
+    font-family: EB Garamond, serif;
   }
 
   .xs\:font-mono {
@@ -14134,11 +14134,11 @@ table {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
-    font-family: garamond-premier-pro-display, Liberation Serif, Georgia, serif;
+    font-family: EB Garamond, serif;
   }
 
   .sm\:font-mono {
@@ -19715,11 +19715,11 @@ table {
   }
 
   .md\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
-    font-family: garamond-premier-pro-display, Liberation Serif, Georgia, serif;
+    font-family: EB Garamond, serif;
   }
 
   .md\:font-mono {
@@ -25296,11 +25296,11 @@ table {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
-    font-family: garamond-premier-pro-display, Liberation Serif, Georgia, serif;
+    font-family: EB Garamond, serif;
   }
 
   .lg\:font-mono {
@@ -30877,11 +30877,11 @@ table {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {
-    font-family: garamond-premier-pro-display, Liberation Serif, Georgia, serif;
+    font-family: EB Garamond, serif;
   }
 
   .xl\:font-mono {
