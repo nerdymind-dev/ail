@@ -1,7 +1,7 @@
 {% set entries = craft.entries.section('authors').all() %}
 
 
-<section class="py-4 font-serif m-auto max-w-xl lg:py-32" id="authors">
+<section class="p-4 font-serif m-auto max-w-xl lg:py-32" id="authors">
     <div class="text-center container m-auto"> 
     <label for="tagline" class="uppercase tracking-wide font-bold text-center text-grey-dark"> About the 
     </label>
@@ -23,7 +23,7 @@
           {% endfor %}
         </div>
         <div class="w-2/3 justify-between leading-normal p-4">           
-          <div class="text-black text-xl leading-loose pr-8 mb-2">
+          <div class="text-black text-xl leading-normal pr-8 mb-2">
             {{ entry.authorBio }}
           </div>
         </div>
