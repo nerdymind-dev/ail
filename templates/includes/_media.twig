@@ -28,13 +28,13 @@
 {% set entries = craft.entries.section('media').relatedTo(category).all() %}      
       {% if entries|length %}
         {% for entry in entries %}
-          <div class="text-center w-full sm:w-1/2 md:w-1/4 p-4">
+          <div class="text-center w-full sm:w-1/2 md:w-1/3 p-4">
             
             <a href="{{ entry.mediaUrl }}" target="_blank" class="no-underline hover:text-grey-darkest text-grey-dark text-2xl">
               
               {% set assets = entry.mediaVideoStill.all() %}
                 {% for asset in assets %}
-                  <img src="{{ asset.getUrl('videoThumb') }}" class="mt-4">
+                  <img src="{{ asset.getUrl('videoThumb') }}" class="w-full mt-4">
                 {% endfor %}
 
               <span class="mb-2">{{ entry.title }} </span><br>
