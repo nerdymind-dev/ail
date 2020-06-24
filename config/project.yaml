@@ -21,12 +21,14 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'categories/{slug}'
         template: resources/_categories
-dateModified: 1575412558
+dateModified: 1593022021
 email:
   fromEmail: andrew@circa42.com
   fromName: 'An Impossible Life'
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  1a7d02f2-eb8f-47dd-b5a3-140358c8ce55:
+    name: Contact
   37f79bb3-3461-4b1d-9197-d30d2102f0d3:
     name: Hero
   3fc25d7b-b697-4aa7-be1e-6c37b5b21699:
@@ -94,6 +96,18 @@ fields:
       minuteIncrement: '30'
     contentColumnType: datetime
     fieldGroup: 3fc25d7b-b697-4aa7-be1e-6c37b5b21699
+  234de446-8f88-4db9-a7bf-69f69c0067d4:
+    name: 'Show Featured Section'
+    handle: showFeaturedSection
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: '1'
+    contentColumnType: boolean
+    fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
   2771aa94-f3bf-474c-be7f-fed584e7126c:
     name: 'Book Cover'
     handle: bookCover
@@ -151,6 +165,34 @@ fields:
       propagationMethod: all
     contentColumnType: string
     fieldGroup: 3fc25d7b-b697-4aa7-be1e-6c37b5b21699
+  3562daed-18b5-41ed-ad32-227ae1f64e86:
+    name: 'Background Image'
+    handle: backgroundImage
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - image
+      sources:
+        - 'volume:52b3cc99-1a8a-468a-9b0f-b8718e160757'
+      source: null
+      targetSiteId: null
+      viewMode: list
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
   359187fa-c63a-4d18-b90e-20bac3663053:
     name: 'Video Matrix'
     handle: videoMatrix
@@ -254,6 +296,27 @@ fields:
       placeholder: ''
     fieldGroup: b1bb3583-4f95-4b0d-8a59-ae8388de865d
     contentColumnType: text
+  59d0045d-1be0-4305-bcd4-fc4af546a4f5:
+    name: 'Contact Us'
+    handle: contactUs
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Simple.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: 1a7d02f2-eb8f-47dd-b5a3-140358c8ce55
   5ec5c781-6da7-475d-98a5-855e86dafa48:
     name: 'Media Logo'
     handle: mediaLogo
@@ -570,6 +633,26 @@ fields:
       propagationMethod: all
     contentColumnType: string
     fieldGroup: f8a7bdde-0f96-4653-8ad3-1a9c6ec8ebd5
+  bd09e8ec-17ae-4dae-956d-ff6be49d56be:
+    name: 'Text Color'
+    handle: textColor
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\RadioButtons
+    settings:
+      options:
+        -
+          label: Dark
+          value: text-black
+          default: ''
+        -
+          label: Light
+          value: text-white
+          default: ''
+    contentColumnType: string
+    fieldGroup: 37f79bb3-3461-4b1d-9197-d30d2102f0d3
   c76cde9f-3a1b-4179-a992-d79f80f108e0:
     name: 'CTA Button'
     handle: ctaButton
@@ -798,15 +881,15 @@ imageTransforms:
     quality: null
     width: 600
   de33a293-691e-4868-b1f9-31f4a4f342ab:
-    name: 'Video thumb'
-    handle: videoThumb
-    mode: fit
-    position: center-center
-    width: 250
-    height: null
     format: null
-    quality: null
+    handle: videoThumb
+    height: null
     interlace: none
+    mode: fit
+    name: 'Video thumb'
+    position: center-center
+    quality: null
+    width: 450
 matrixBlockTypes:
   091d4cea-6b01-4932-bf43-1001e7647c58:
     field: 30d4286e-ad12-43ff-a15f-2d2ecb9100d7
@@ -1460,18 +1543,34 @@ sections:
                 name: Hero
                 sortOrder: 1
                 fields:
-                  634ad71d-37df-4ce2-8b21-528f030dfcd8:
-                    required: false
-                    sortOrder: 4
-                  925bc3a5-795b-4bf2-a030-7d9066fea92d:
-                    required: false
-                    sortOrder: 2
-                  aaae8cf4-f93e-4153-80a4-86c935457baf:
+                  234de446-8f88-4db9-a7bf-69f69c0067d4:
                     required: false
                     sortOrder: 1
-                  c76cde9f-3a1b-4179-a992-d79f80f108e0:
-                    required: false
+                  3562daed-18b5-41ed-ad32-227ae1f64e86:
+                    required: true
+                    sortOrder: 2
+                  634ad71d-37df-4ce2-8b21-528f030dfcd8:
+                    required: true
+                    sortOrder: 7
+                  925bc3a5-795b-4bf2-a030-7d9066fea92d:
+                    required: true
+                    sortOrder: 4
+                  aaae8cf4-f93e-4153-80a4-86c935457baf:
+                    required: true
                     sortOrder: 3
+                  bd09e8ec-17ae-4dae-956d-ff6be49d56be:
+                    required: false
+                    sortOrder: 5
+                  c76cde9f-3a1b-4179-a992-d79f80f108e0:
+                    required: true
+                    sortOrder: 6
+              -
+                name: Contact
+                sortOrder: 2
+                fields:
+                  59d0045d-1be0-4305-bcd4-fc4af546a4f5:
+                    required: false
+                    sortOrder: 1
     siteSettings:
       294d42da-43a8-438d-8070-ed01a0d18aa1:
         enabledByDefault: true
