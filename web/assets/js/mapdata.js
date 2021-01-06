@@ -75,7 +75,8 @@ var simplemaps_usmap_mapdata={
     },
     AK: {
       name: "Alaska",
-      //url: "/journey/alaska"
+      color: "#f2d023",
+      url: "/journey/alaska"
     },
     FL: {
       name: "Florida",
@@ -234,7 +235,8 @@ var simplemaps_usmap_mapdata={
     },
     OK: {
       name: "Oklahoma",
-      //url: "/journey/oklahoma"
+      color: "#f2d023",
+      url: "/journey/oklahoma"
     },
     TX: {
       name: "Texas",
@@ -258,22 +260,28 @@ var simplemaps_usmap_mapdata={
     },
     SD: {
       name: "South Dakota",
-      //url: "/journey/south-dakota"
+      color: "#f2d023",
+      url: "/journey/south-dakota"
     },
     ND: {
       name: "North Dakota",
-      //url: "/journey/north-dakota"
+      color: "#f2d023",
+	  url: "/journey/north-dakota"
     },
     WY: {
       name: "Wyoming",
-      //url: "/journey/wyoming"
+      color: "#f2d023",
+      url: "/journey/wyoming"
     },
     MT: {
       name: "Montana",
-      //url: "/journey/montana"
+      color: "#f2d023",
+      url: "/journey/montana"
     },
     CO: {
       name: "Colorado",
+      color: "#f2d023",
+      url: "/journey/colorado"
     },
     UT: {
       name: "Utah",
